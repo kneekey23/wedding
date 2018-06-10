@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
+//import { RouteComponentProps } from 'react-router';
 
 export class RSVP extends React.Component<{}, {}>{
     public render() {
@@ -7,7 +7,7 @@ export class RSVP extends React.Component<{}, {}>{
         <div className="container">
            <div className="row vertical-align">
               <div className="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 ">
-                 <h1 className="title">Registry</h1>
+                 <h1 className="title">RSVP</h1>
                  <p className="mt-20 pd-r20">The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us we’ve picked out a few items, activities, and charities that pique our interests.</p>
               </div>
               <div className="col-md-5 col-sm-5 ">

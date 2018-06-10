@@ -5,7 +5,6 @@ export class SaveTheDate extends React.Component<{}, {}>  {
     public render() {
         return <section className="date pt-150 pb-150 overlay">
         <div className="background-img">
-           <img src="img/4.jpg" alt="" />
         </div>
         <div className="container">
            <div className="row">

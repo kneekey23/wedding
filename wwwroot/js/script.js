@@ -19,6 +19,7 @@
         pos = header.offset();
 
     $(window).scroll(function() {
+        if(pos != undefined){
         if ($(this).scrollTop() > pos.top + 500 && header.hasClass('default')) {
             header.fadeOut('fast', function() {
                 $(this).removeClass('default').addClass('switched-header').fadeIn(200);
@@ -28,6 +29,7 @@
                 $(this).removeClass('switched-header').addClass('default').fadeIn(100);
             });
         }
+    }
     });
 
 

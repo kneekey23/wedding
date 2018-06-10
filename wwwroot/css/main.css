@@ -123,16 +123,16 @@
 
 /* Hero Section*/
 
-/* section.hero {
+ section.hero {
     background: #353031;
     padding: 0;
     position: relative;
-    min-height: 700px;
+    min-height: 1125px;
     height: 100vh;
-} */
-/* .background-img img {
+} 
+ /* .background-img img {
     display: none;
-} */
+}  */
 .background-img {
     width: 100%;
     height: 100%;
@@ -141,7 +141,7 @@
     background-attachment: scroll;
     background-clip: border-box;
     background-color: #353031;
-    background-image: none;
+    /* background-image: none; */
     background-origin: padding-box;
     background-position: 50% 50% !important;
     background-repeat: repeat;
@@ -152,6 +152,10 @@
     top: 0;
     width: 100%;
     z-index: 0;
+}
+
+.date .background-img {
+    background-image: url('/img/hdc.jpg');
 }
 .overlay:before {
     position: absolute;
@@ -347,7 +351,7 @@ h1.large {
     justify-content: center;
     -webkit-justify-content: center;
     -ms-justify-content: center;
-    background: #efd1be;
+    background: #800020;
     position: relative;
     box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
     -webkit-box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
@@ -356,7 +360,7 @@ h1.large {
     -o-box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
 }
 .round-circle:before {
-    background: #8de9be;
+    background: #add8e6;
     border-radius: 0 100px 100px 0;
     -webkit-border-radius: 0 100px 100px 0;
     -moz-border-radius: 0 100px 100px 0;
@@ -392,7 +396,8 @@ h1.large {
     margin-right: -4px;
 }
 .block-date-hero li:first-child {
-    background: #eee0d5;
+    background: #800020;
+    color: white !important;
     border-radius: 100px 0 0 100px;
     -webkit-border-radius: 100px 0 0 100px;
     -moz-border-radius: 100px 0 0 100px;
@@ -400,7 +405,7 @@ h1.large {
     -o-border-radius: 100px 0 0 100px;
 }
 .block-date-hero li:last-child {
-    background: #b0f2d3;
+    background: #add8e6;
     border-radius: 0 100px 100px 0;
     -webkit-border-radius: 0 100px 100px 0;
     -moz-border-radius: 0 100px 100px 0;
@@ -455,7 +460,7 @@ h1.large {
     position: relative;
 }
 .circle-dashed.bg {
-    background: #eee0d5;
+    background: #add8e6;
     box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
     -webkit-box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
     -moz-box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
@@ -471,7 +476,7 @@ h1.large {
     -o-transform: translate(-42%, -114%);
 }
 .circle-dashed.green {
-    background: #b0f2d3;
+    background: #800020;
 }
 .round-circle.before:before {
     content: none;
@@ -480,7 +485,7 @@ h1.large {
     box-shadow: none;
 }
 .round-circle.green {
-    background: #8de9be;
+    background: #add8e6;
 }
 /* Love story section*/
 
@@ -496,7 +501,7 @@ h1.large {
 /* Events section*/
 
 .block-event {
-    border: 20px solid #b0f2d3;
+    border: 20px solid #800020;
     padding: 50px 0;
     box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
     -webkit-box-shadow: 0 0 20px rgba(53, 48, 49, 0.15);
@@ -508,7 +513,7 @@ h1.large {
     top: 25%;
 }
 .block-event.swap {
-    border-color: #eee0d5;
+    border-color: #add8e6;
 }
 .block-event p {
     color: #353031;
@@ -683,7 +688,7 @@ blockquote {
     margin-bottom: 0;
 }
 .registry-form .submit {
-    background: #8de9be;
+    background: #800020;
     cursor: pointer;
     position: relative;
     width: 100%;

@@ -12,7 +12,7 @@ export class Photos extends React.Component<{}, {}>{
                  <div className="block-img">
                     <a href="img/6.jpg" className="venobox">
                        <div className="background-img">
-                          <img alt="" src="img/6.jpg" />
+                          <img alt="" src="https://s3-us-west-1.amazonaws.com/nickijustin/NJ-3.jpg" />
                        </div>
                     </a>
                  </div>
@@ -21,7 +21,7 @@ export class Photos extends React.Component<{}, {}>{
                  <div className="block-img">
                     <a href="img/7.jpg" className="venobox">
                        <div className="background-img">
-                          <img alt="" src="img/7.jpg" />
+                          <img alt="" src="https://s3-us-west-1.amazonaws.com/nickijustin/NJ-6.jpg" />
                        </div>
                     </a>
                  </div>
@@ -30,7 +30,7 @@ export class Photos extends React.Component<{}, {}>{
                  <div className="block-img">
                     <a href="img/8.jpg" className="venobox">
                        <div className="background-img">
-                          <img alt="" src="img/8.jpg" />
+                          <img alt="" src="https://s3-us-west-1.amazonaws.com/nickijustin/NJ-13.jpg" />
                        </div>
                     </a>
                  </div>
@@ -41,7 +41,7 @@ export class Photos extends React.Component<{}, {}>{
                  <div className="block-img">
                     <a href="img/9.jpg" className="venobox">
                        <div className="background-img">
-                          <img alt="" src="img/9.jpg" />
+                          <img alt="" src="https://s3-us-west-1.amazonaws.com/nickijustin/NJ-71.jpg" />
                        </div>
                     </a>
                  </div>
@@ -50,7 +50,7 @@ export class Photos extends React.Component<{}, {}>{
                  <div className="block-img">
                     <a href="img/10.jpg" className="venobox">
                        <div className="background-img">
-                          <img alt="" src="img/10.jpg" />
+                          <img alt="" src="https://s3-us-west-1.amazonaws.com/nickijustin/NJ-101.jpg" />
                        </div>
                     </a>
                  </div>
@@ -59,7 +59,7 @@ export class Photos extends React.Component<{}, {}>{
                  <div className="block-img">
                     <a href="img/11.jpg" className="venobox">
                        <div className="background-img">
-                          <img alt="" src="img/11.jpg" />
+                          <img alt="" src="https://s3-us-west-1.amazonaws.com/nickijustin/NJ-113.jpg" />
                        </div>
                     </a>
                  </div>

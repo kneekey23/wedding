@@ -7,8 +7,8 @@ export class LoveStory extends React.Component<{}, {}>  {
                      <div className="container">
                         <div className="row">
                             <div className="col-sm-12 text-center mb-30">
-                 <              h1 className="title">Our love story</h1>
-                                <p>Pooh and Piglet find their honey</p>
+                                <h1 className="title">Our love story</h1>
+                                <h3 className="title">Pooh and Piglet find their honey</h3>
                             </div>
                         </div>
                         <div className="row">

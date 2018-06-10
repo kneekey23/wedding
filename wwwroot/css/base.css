@@ -233,8 +233,12 @@ p.heavy.normal,
 h1.title {
     font-size: 50px;
 }
+h3.title {
+    font-size: 19px;
+}
 p.lead {
     font-size: 17px;
+    font-weight: bold;
 }
 p.lead.size-m {
     font-size: 16px;
