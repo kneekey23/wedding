@@ -7,12 +7,13 @@ import { Photos } from './Photos';
 import {Friends} from './Friends';
 import {Accomodations} from './Accomodations';
 import { RSVP } from './RSVP';
+import { OurWedding } from './OurWedding';
 
-export interface LayoutProps {
-    children?: React.ReactNode;
-}
+// export interface LayoutProps {
+//     children?: React.ReactNode;
+// }
 
-export class Layout extends React.Component<LayoutProps, {}> {
+export class Layout extends React.Component<{}, {}> {
     public render() {
         return <div className='wrapper'>
                     <section className='hero overlay'>
@@ -56,8 +57,12 @@ export class Layout extends React.Component<LayoutProps, {}> {
                     </section>
                     <LoveStory />
                     <SaveTheDate />
-
-                    { this.props.children }
+                    <OurWedding />
+                    <Photos />
+                    <Registry />
+                    <Friends />
+                    <Accomodations />
+                    <RSVP />
 
                     <section className="just-married pt-200 pb-200 overlay">
                         <div className="background-img">

@@ -10,6 +10,6 @@ import { RSVP } from './components/RSVP';
 
 
 export const routes = <Layout>
-    <Route exact path='/' component={ OurWedding } />
+    
     
 </Layout>;

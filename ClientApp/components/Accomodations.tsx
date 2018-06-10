@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
+//import { RouteComponentProps } from 'react-router';
 
-export class Accomodations extends React.Component<RouteComponentProps<{}>, {}> {
+export class Accomodations extends React.Component<{}, {}> {
     public render() {
         return  <section className="accom pt-120 pb-120 ">
         <div className="container">

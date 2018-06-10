@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
+//import { RouteComponentProps } from 'react-router';
 
 export class SaveTheDate extends React.Component<{}, {}>  {
     public render() {
@@ -13,7 +13,7 @@ export class SaveTheDate extends React.Component<{}, {}>  {
               <div className="col-sm-12 text-center">
                  <div className="block-content front-p">
                     <h2 className="typo">Save the date</h2>
-                    <p className="lead mt-20 text-white">Saturday May 10th, 2017 - 28 Chalmers Street, Sydney</p>
+                    <p className="lead mt-20 text-white">Saturday May 11th, 2019 - Hotel Del Coronado Coronado,CA</p>
                     <span className="countdown text-white"></span>
                  </div>
               </div>

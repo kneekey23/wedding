@@ -24,7 +24,8 @@ renderApp();
 // Allow Hot Module Replacement
 if (module.hot) {
     module.hot.accept('./routes', () => {
-        routes = require<typeof RoutesModule>('./routes').routes;
+        console.log("works");
+       routes = require<typeof RoutesModule>('./routes').routes;
         renderApp();
     });
 }

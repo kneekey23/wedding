@@ -1,96 +1,33 @@
 import * as React from 'react';
-import { RouteComponentProps } from 'react-router';
+//import { RouteComponentProps } from 'react-router';
 
 export class LoveStory extends React.Component<{}, {}>  {
     public render() {
         return <section id="story" className="story pt-120 pb-120">
                      <div className="container">
                         <div className="row">
-                            <div className="col-sm-12 text-center mb-100">
+                            <div className="col-sm-12 text-center mb-30">
                  <              h1 className="title">Our love story</h1>
-                                <p>The Story of our love and the Wedding</p>
+                                <p>Pooh and Piglet find their honey</p>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 text-center mb-30">
-                                <h2 className="heavy">When Sara Miller Met Ben Shneider
-                                <span>That day changed everything</span>
-                                </h2>
+                            <div className="col-md-10 col-sm-8 col-sm-offset-2 mb-30">
+                                <h2 className="heavy">Let's talk about fate...
+                                <p>It typically seems more mystical than realistic.  Try assigning a probability to the following: </p>
+                                <p>Unbeknownst to each other, Nicki and Justin grew up two miles apart, and indeed, Nicki was supposed to go to the same elementary school as Justin before her family moved to Newport Beach. They spent the rest of their childhoods separated by a mere two miles, going through the phases of adolescence together simultaneously, geographically close, yet physically apart.</p>
+                                <p>Nicki and Justin had mutual friends, including Justin's cousin, yet never met until.... Nicki happened to visit Orange County for the weekend!  Having finished her work early, she decided to spend a few minutes loading up the Jewish version of Tinder to fill the time.  Meanwhile, in the middle of reviewing his clients' portfolios over the weekend, Justin wanted to survey the Jewish prospects in Orange County. </p>
+                                <p>App loaded ... Justin scores gold with the first person he sees! Okay, she seems smart and cute, swipe right and a match.  They go on a single date, delete their apps without looking at other profiles, and the rest is history!
+Fast forward two amazing years later and Justin plans what's supposed to be the proposal of the year. But he gets overly excited/ anxious and may have proposed while Nicki was blow drying her hair the night before he was planning to do it. Of course she says yes! The next day both sets of families delightfully surprise her at brunch to celebrate.</p>
+</h2>
                             </div>
                             <div className="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 text-center">
                                 <div className="img-round">
-                                <div className="img"><img src="img/2.png" alt="" /></div>
+                                <div className="img"><img src="img/NJ-107.png" alt="" /></div>
                                 <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg"  className="dashed-border">
                                     <circle cx="50%" cy="50%" r="50" />
                                 </svg>
                                 </div>
-                            </div>
-                        </div>
-                        <div className="row story-row mt-100 mb-100">
-                            <div className="circle-dashed timeline bg">
-                                <div className="round-circle bg before">
-                                    <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg" className="dashed-border">
-                                    <circle cx="50%" cy="50%" r="50"/>
-                                    </svg>
-                                    <i className="icon-heart"></i>
-                                </div>
-                            </div>
-                            <div className="col-sm-5 ">
-                                <div className="couple-story text-right">
-                                    <h2 className="heavy mb-10">Our first met<span>12 Sept 2016</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus</p>
-                                </div>
-                            </div>
-                            <div className="col-sm-5 col-sm-offset-2">
-                                <div className="couple-story">
-                                    <h2 className="heavy mb-10">Our first Dating<span>23 Oct 2016</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row story-row mt-100 mb-80 ">
-                            <div className="circle-dashed timeline bg green">
-                                <div className="round-circle  green before">
-                                    <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg" className="dashed-border">
-                                    <circle cx="50%" cy="50%" r="50"/>
-                                    </svg>
-                                    <i className="icon-heart"></i>
-                                </div>
-                            </div>
-                            <div className="col-sm-5 ">
-                                <div className="couple-story text-right">
-                                    <h2 className="heavy mb-10">How he proposed<span>27 Jan 2017</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus</p>
-                                </div>
-                            </div>
-                            <div className="col-sm-5 col-sm-offset-2">
-                                <div className="couple-story">
-                                    <h2 className="heavy mb-10">Since then we are together<span>To present</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam notn bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 text-center">
-                                <div className="img-round">
-                                    <div className="img"><img src="img/3.png" alt=""/></div>
-                                    <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg"  className="dashed-border">
-                                    <circle cx="50%" cy="50%" r="50" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 text-center mt-30">
-                                <h2 className="heavy">Happy ending we will get married<span>Counting the days...</span></h2>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-md-12  text-center mt-100">
-                                <a href="#" className="but">
-                                    <span>Wedding location</span>
-                                    <svg className="but-svg" width="175" height="50" viewBox="0 0 415 120" xmlns="http://www.w3.org/2000/svg">
-                                    <rect className="but-rect" x="10" y="10" width="400" height="100" rx="6" ry="6"/>
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </div>
