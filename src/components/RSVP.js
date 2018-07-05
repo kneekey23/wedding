@@ -8,11 +8,11 @@ export class RSVP extends React.Component {
            <div className="row vertical-align">
               <div className="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 ">
                  <h1 className="title">RSVP</h1>
-                 <p className="mt-20 pd-r20">The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us we’ve picked out a few items, activities, and charities that pique our interests.</p>
+                 <p className="mt-20 pd-r20 rsvpFont">This section is coming soon. You will be available to RSVP online when official invitations get sent out.</p>
               </div>
               <div className="col-md-5 col-sm-5 ">
                  <div className="block-registry">
-                    <h2 className="heavy normal mb-30">You can make your reservation for the wedding here</h2>
+                    <h2 className="heavy normal mb-30">You can RSVP to our wedding here</h2>
                     <form className="registry-form " method="post" action="#">
                        <input placeholder="Your name" value="" id="name" name="name" type="text"/>
                        <div className="input-columns clearfix">
@@ -33,7 +33,7 @@ export class RSVP extends React.Component {
                              </div>
                           </div>
                        </div>
-                       <input value="Iam Attending the wedding" className=" but submit" type="submit"/>
+                       <button className=" btn but submit" disabled type="submit">Submit My RSVP</button>
                     </form>
                  </div>
               </div>

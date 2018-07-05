@@ -130,6 +130,38 @@
     min-height: 1125px;
     height: 100vh;
 } 
+
+@media only screen and (min-width: 1201px) {
+    section.hero {
+        min-height: 948px;
+    }
+}
+
+@media only screen and (min-width: 1015px) and (max-width: 1200px) {
+    section.hero {
+        min-height: 775px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1014px){
+    section.hero {
+        min-height: 662px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 991px){
+    section.hero {
+        min-height: 486px;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 599px){
+    section.hero {
+        min-height: 360px;
+    }
+}
+
+
  /* .background-img img {
     display: none;
 }  */
@@ -154,8 +186,15 @@
     z-index: 0;
 }
 
+.hero .background-img {
+    background-image: url('/img/NJ.jpg');
+}
 .date .background-img {
     background-image: url('/img/hdc.jpg');
+}
+
+.just-married .background-img {
+    background-image: url('/img/NJ-68.jpg');
 }
 .overlay:before {
     position: absolute;
@@ -647,7 +686,7 @@ blockquote {
     font-size: 23px;
     float: right;
     color: white;
-    padding:30px;
+    padding:10px;
 }
 .registryText span {
     display: block;
@@ -746,6 +785,11 @@ blockquote {
 } */
 .accomm {
     padding: 45px;
+}
+
+/*RSVP section*/
+.rsvpFont {
+    font-size: 20px;
 }
 
 /*Media queries*/

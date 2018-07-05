@@ -14,7 +14,7 @@ class Layout extends React.Component{
         return ( <div className='wrapper'>
                     <section className='hero overlay'>
                         <div className='background-img'>
-                            <img src='img/NJ.jpg' alt='' />
+                            {/* <img src='img/NJ.jpg' alt='' /> */}
                         </div>
                         <header className='header default'>
                             <div className='left-part'>
@@ -62,7 +62,7 @@ class Layout extends React.Component{
 
                     <section className="just-married pt-200 pb-200">
                         <div className="background-img">
-                        <img src="img/NJ-68.jpg" alt=""/>
+                       
                         </div>
                         <div className="container">
                             <div className="row">

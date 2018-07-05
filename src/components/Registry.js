@@ -26,7 +26,7 @@ export class Registry extends React.Component {
               </div>
               <div className="col-sm-5 mt-50 registryBlock">
                  <div className="block-content">
-                 <a href="https://www.travelersjoy.com/nickiandjustin23">
+                 <a className="btn" href="https://www.travelersjoy.com/nickiandjustin23">
                     <img className="gift-reg" src="https://www.travelersjoy.com/images/logos/registry.png" alt="" />
                     <p className="registryText"><span>Traveler's Joy</span> <span>Honeymoon Registry</span></p>
                     </a>
