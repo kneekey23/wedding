@@ -181,7 +181,7 @@ export class Friends extends Component{
               </div>
               <div className="col-sm-4 col-sm-offset-2 text-center">
                  <h2 className="heavy mt-20">Danielle Napolitano<span>Bridesmaid </span></h2>
-                 <p className="friendText">Nicki's childhood best friend. They met in middle school and have been inseparable ever since. The adventures of Monet and Nicki span 15 years and are among her most precious and beloved moments. </p>
+                 <p className="friendText">Nicki's roommate from freshman year at UCLA and fellow sorority sister. Natalie and Nicki lucked out with Danielle freshman year and have been close friends ever since. Danielle is a sweet and loyal-hearted friend with excellent skills in all things Nicki desperately needs help with i.e. hair, makeup, nails. </p>
               </div>
               <div className="col-sm-4  text-center">
                  <h2 className="heavy mt-20">Adam Harris<span>Groomsman </span></h2>
