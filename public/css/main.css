@@ -635,6 +635,9 @@ img.gift-reg {
     max-width: 30%;
     cursor: pointer;
 }
+img.travelersjoy {
+    max-width: 16% !important;
+}
 img.gift-reg:hover {
     opacity: .8;
 }
@@ -678,15 +681,14 @@ blockquote {
 
 .registryBlock .block-content {
     background: #800020;
-    padding: 10px;
     border: 10px solid #add8e6;
 }
 
 .registryText{
     font-size: 23px;
-    float: right;
     color: white;
-    padding:10px;
+    margin-left:20px
+    
 }
 .registryText span {
     display: block;

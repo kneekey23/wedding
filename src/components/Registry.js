@@ -12,26 +12,35 @@ export class Registry extends React.Component {
               </div>
            </div>
            <div className="row relative">
-           <div className="col-sm-5 mt-50">
-           <p className="lead size-m mt-20">The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us we’ve picked out a few items, activities, and charities that pique our interests.</p>
-
-           </div>
-              <div className="circle-dashed  bg middle">
-                 <div className="round-circle before">
-                    <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg" className="dashed-border">
-                       <circle cx="50%" cy="50%" r="50"/>
-                    </svg>
-                    <i className="icon-gift"></i>
-                 </div>
-              </div>
-              <div className="col-sm-5 mt-50 registryBlock">
+                <div className="col-sm-4">
+                    <p className="lead size-m mt-20">The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us we’ve picked out a few items, activities, and charities that pique our interests.</p>
+                </div>
+              <div className="col-sm-4 registryBlock">
                  <div className="block-content">
                  <a className="btn" href="https://www.travelersjoy.com/nickiandjustin23">
-                    <img className="gift-reg" src="https://www.travelersjoy.com/images/logos/registry.png" alt="" />
-                    <p className="registryText"><span>Traveler's Joy</span> <span>Honeymoon Registry</span></p>
+                    <img className="gift-reg travelersjoy" src="https://www.travelersjoy.com/images/logos/registry.png" alt="" />
+                    <span className="registryText">Traveler's Joy</span>
                     </a>
                  </div>
               </div>
+              <div className="col-sm-4 registryBlock">
+                 <div className="block-content">
+                 <a className="btn" href="https://www.amazon.com/wedding/nicole-klein-justin-stone-coronado-may-2019/registry/7KJV4VOZ1QU0">
+                    <img className="gift-reg" src="img/amazon.png" alt="" />
+                    <span className="registryText">Amazon Registry</span>
+                    </a>
+                 </div>
+              </div>
+           </div>
+           <div>
+               <div className="col-sm-offset-4 col-sm-4 registryBlock">
+               <div className="block-content">
+                 <a className="btn" href="https://www.potterybarn.com/registry/qfrh7prlxk/registry-list.html">
+                    <img className="gift-reg" src="img/pb.png" alt="" />
+                    <span className="registryText">Pottery Barn</span>
+                    </a>
+                 </div>
+               </div>
            </div>
         </div>
      </section>)
