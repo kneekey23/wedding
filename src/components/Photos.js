@@ -7,7 +7,7 @@ export class Photos extends React.Component{
         return ( <section id="photos" className="album bg-grey pt-120 pb-120">
                     <div className="container">
            <div className="row mb-30">
-                 <h2 className="indent">Photo album</h2>
+                 <h2 className="indent">Photo Album</h2>
               <div className="col-md-4 col-sm-4 col-xs-12 " >
                  <div className="block-img">
                     <a href="img/6.jpg" className="venobox">

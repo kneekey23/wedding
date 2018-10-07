@@ -20,6 +20,7 @@ export class NavMenu extends React.Component {
                        </li>
                        <li><a className='scroll' href='#gift'>Gift registry</a></li>
                        <li><a className='scroll' href='#friend'>Friends</a></li>
+                       <li><a className='scroll' href='#accomodation'>Accomodations</a></li>
                        <li><a className='scroll' href='#rsvp'>RSVP</a></li>
                     </ul>
                  </nav>)

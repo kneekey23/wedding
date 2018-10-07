@@ -7,7 +7,7 @@ export class LoveStory extends React.Component {
                      <div className="container">
                         <div className="row">
                             <div className="col-sm-12 text-center mb-30">
-                                <h1 className="title">Our love story</h1>
+                                <h1 className="title">Our Love Story</h1>
                                 <h3 className="title">Pooh and Piglet find their honey</h3>
                             </div>
                         </div>

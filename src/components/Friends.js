@@ -8,8 +8,8 @@ export class Friends extends Component{
         <div className="container">
            <div className="row">
               <div className="col-sm-12 text-center mb-100">
-                 <h1 className="title">Our best friends</h1>
-                 <p>We are lucky to have them in our side</p>
+                 <h1 className="title">Our Best Friends</h1>
+                 <p>We are lucky to have them by our side</p>
               </div>
            </div>
            <div className="row">

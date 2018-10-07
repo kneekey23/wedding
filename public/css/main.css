@@ -186,6 +186,12 @@
     z-index: 0;
 }
 
+.bike .background-img {
+    position: relative;
+    background-image: url('/img/bike.jpg');
+    height: auto !important;
+}
+
 .hero .background-img {
     background-image: url('/img/NJ.jpg');
 }
@@ -787,6 +793,10 @@ blockquote {
 } */
 .accomm {
     padding: 45px;
+}
+
+.toDo {
+    padding:20px;
 }
 
 /*RSVP section*/

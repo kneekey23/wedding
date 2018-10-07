@@ -8,7 +8,7 @@ export class SaveTheDate extends React.Component  {
         </div>
         <div className="container">
            <div className="row">
-                 <h2 className="indent">Wedding date</h2>
+                 <h2 className="indent">Wedding Date</h2>
               <div className="col-sm-12 text-center">
                  <div className="block-content front-p">
                     <h2 className="typo">Save the date</h2>
