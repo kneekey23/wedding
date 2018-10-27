@@ -25,8 +25,15 @@ export class Accomodations extends React.Component{
                     Coronado, CA 92118  
                     (619) 435-6611
                  </p>
+                 <p>If the room block is full, please let us know and we will try to add more rooms to it.</p>
                  <a href="https://hoteldel.com/" className="but mt-30">
                     <span>Visit Website</span>
+                    <svg className="but-svg" width="175" height="50" viewBox="0 0 290 120" xmlns="http://www.w3.org/2000/svg">
+                       <rect className="but-rect" x="10" y="10" width="270" height="100" rx="6" ry="6"/>
+                    </svg>
+                 </a>
+                 <a href="https://book.passkey.com/e/49759556" className="but mt-30">
+                    <span>Room Block</span>
                     <svg className="but-svg" width="175" height="50" viewBox="0 0 290 120" xmlns="http://www.w3.org/2000/svg">
                        <rect className="but-rect" x="10" y="10" width="270" height="100" rx="6" ry="6"/>
                     </svg>
