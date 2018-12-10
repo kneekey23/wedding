@@ -1,0 +1,17 @@
+{
+  "name": "dynamoupload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "upload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.1",
+    "aws-sdk": "^2.373.0",
+    "csv-parse": "^4.1.0",
+    "uuid": "^3.3.2"
+  }
+}
