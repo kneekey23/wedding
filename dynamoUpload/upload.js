@@ -36,9 +36,6 @@ parser = parse({
                 "lastName": {
                   "S": cur25[i].lastName
                 },
-                "phone": {
-                  "S": cur25[i].phone
-                },
                 "email": {
                     "S": cur25[i].email
                 },
@@ -50,10 +47,14 @@ parser = parse({
                 },
                 "attending": {
                     "BOOL": isTrue(cur25[i].attending)
+                },
+                "groupId": {
+                    "S": cur25[i].groupId
                 }
               }
             }
           };
+
           item_data.push(this_item)
         }
         split_arrays.push(item_data);
@@ -63,7 +64,7 @@ parser = parse({
     async.each(split_arrays, (item_data, callback) => {
         const params = {
             RequestItems: {
-                "GuestList" : item_data
+                "WeddingGuestList" : item_data
             }
         }
         dynamodbDocClient.batchWriteItem(params, function(err, res, cap) {

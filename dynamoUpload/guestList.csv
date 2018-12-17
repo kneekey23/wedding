@@ -1,184 +1,197 @@
-firstName,lastName,phone,email,address,plusOne,foodChoice,attending
-Justin,Stone,949-378-5755,jds225@cornell.edu,"2030 8th Ave Unit 1805 Seattle, WA 98121",FALSE,,FALSE
-Rena,Stone,949-981-6465,rcstone2@cox.net,"3 Suncreek Irvine, CA 92604",FALSE,,FALSE
-Steve,Stone,949-552-8250,rcstone2@cox.net,"3 Suncreek Irvine, CA 92604",FALSE,,FALSE
-Meryl,Stone,650-387-1524,merylstone@gmail.com,"39 Delmar St San Francisco, CA 94117",FALSE,,FALSE
-Ramin,Tohidi,415-852-0407,ramin.tohidi@gmail.com,"39 Delmar St San Francisco, CA 94117",FALSE,,FALSE
-Lynn,Stone,713-703-3082,lynn.yudofsky@gmail.com,"1002 Roble Ave Apt #3 Menlo Park, CA 94025",FALSE,,FALSE
-Matt,Stone,713-703-3082,matthewstone5@gmail.com,"1002 Roble Ave Apt #3 Menlo Park, CA 94025",FALSE,,FALSE
-Nicki,Klein,714-925-5830,nicoleklein@me.com,"2030 8th Ave Unit 1805 Seattle, WA 98121",FALSE,,FALSE
-Lori,Klein,714-585-6080,kleinfamily333@me.com,23 San Antonio Newport Beach CA 92660,FALSE,,FALSE
-Jeffery,Klein,714-585-6128,jefferyklein@me.com,23 San Antonio Newport Beach CA 92660,FALSE,,FALSE
-Cameron,Klein,714-915-2014,cjk63@me.com,23 San Antonio Newport Beach CA 92260,FALSE,,FALSE
-Hadley,Piper,949-423-4418,hadley.piper8@gmail.com,"13732 Winthrope St Santa Ana, CA 92705",FALSE,,FALSE
-Breanna,Klein,858-652-8446,breannalynnklein@gmail.com,"4344 Alabama St Apt 9 San Diego, CA 92104",FALSE,,FALSE
-Monet,Bourguignon,949-637-7862,monethartsyou@gmail.com,28215 Paseo El Siena Laguna Niguel CA 92677,FALSE,,FALSE
-Ryan,Bourguignon,949-637-7862,monethartsyou@gmail.com,28215 Paseo El Siena Laguna Niguel CA 92677,FALSE,,FALSE
-Selina,Duran,323-810-7381,selina.t.duran@gmail.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,,FALSE
-Nick,Lipscomb,323-810-7381,selina.t.duran@gmail.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,,FALSE
-Ari,Gottesman,602-859-3554,arigruys@gmail.com,"6522 E Thunderbird Road Scottsdale, AZ 85254",FALSE,,FALSE
-Baruch,Gottesman,602-859-3554,arigruys@gmail.com,"6522 E Thunderbird Road Scottsdale, AZ 85254",FALSE,,FALSE
-Danielle,Napolitano,714-227-0750,danipineira@gmail.com,1600 Ardmore Ave Unit 217 Hermosa Beach CA 90254,FALSE,,FALSE
-Andy,Napolitano,714-227-0750,danipineira@gmail.com,1600 Ardmore Ave Unit 217 Hermosa Beach CA 90254,FALSE,,FALSE
-Kristina,Sidrak,714-381-0104,ksidrak@gmail.com,"1229 12th St Apt 10 Santa Monica, CA 90401",TRUE,,FALSE
-Natalie,Rodriguez,805-459-2695,nrodmini@yahoo.com,"1516 Wicket Ct Concord, CA 94518",FALSE,,FALSE
-Derek,Dahlin,805-459-2695,nrodmini@yahoo.com,"1516 Wicket Ct Concord, CA 94518",FALSE,,FALSE
-Alicia,Duran,626-201-4246,alicia_d1@yahoo.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,,FALSE
-Greg,Duran,626-201-1711,alicia_d1@yahoo.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,,FALSE
-Antoinette,Bishara,858-539-3458,antoinettejbrou@gmail.com,"2000 North Commonwealth Ave Los Angeles, CA 90027",FALSE,,FALSE
-Ryan,Bishara,858-539-3458,antoinettejbrou@gmail.com,"2000 North Commonwealth Ave Los Angeles, CA 90027",FALSE,,FALSE
-Melissa,Mahdavi,925-963-3353,maderenzi@gmail.com,"9618 Exposition Blvd Apt 217 Los Angeles, CA 90034",FALSE,,FALSE
-Babak,Mahdavi,925-963-3353,maderenzi@gmail.com,"9618 Exposition Blvd Apt 217 Los Angeles, CA 90034",FALSE,,FALSE
-Allie,Baca,805-550-4779,abandreen@gmail.com,4376 5th St Riverside CA 92501,FALSE,,FALSE
-Matthew,Baca,805-550-4779,abandreen@gmail.com,4376 5th St Riverside CA 92501,FALSE,,FALSE
-Amy,Ambard,951-264-6395,amy_silva@me.com,"10482 Beryl Avenue Mentone, CA 92359",FALSE,,FALSE
-Noah,Ambard,951-264-6395,amy_silva@me.com,"10482 Beryl Avenue Mentone, CA 92359",FALSE,,FALSE
-Brittany,Sundstrom,949-697-8620,beedee1989@yahoo.com,4364 E. 127th Place Thornton CO 80241,FALSE,,FALSE
-Eric,Sundstrom,949-697-8620,beedee1989@yahoo.com,4364 E. 127th Place Thornton CO 80241,FALSE,,FALSE
-Jenn,Zehenni,310-490-5711,jzehenni@gmail.com,2132 Century Park Lane #412 Los Angeles CA 90067,FALSE,,FALSE
-Steve,Metz,310-490-5711,jzehenni@gmail.com,2132 Century Park Lane #412 Los Angeles CA 90067,FALSE,,FALSE
-Rachel,Kent,949-533-1298,rkent16@gmail.com,"218 15th St Manhattan Beach, CA 90266",FALSE,,FALSE
-Mark,Paulsen,949-533-1298,rkent16@gmail.com,"218 15th St Manhattan Beach, CA 90266",FALSE,,FALSE
-Nadia,Terheggen,619-855-5907,nadia.elharazin@gmail.com,"11017 Harvest Time Dr Austin, TX 78754",FALSE,,FALSE
-Parker,Terheggen,310-292-6584,nadia.elharazin@gmail.com,"11017 Harvest Time Dr Austin, TX 78754",FALSE,,FALSE
-Greg,Snyder,951-203-4819,funnytailguy@gmail.com,"7332 Arlington Garden St Las Vegas, NV 89166",FALSE,,FALSE
-Sandra,Susino,646-339-3738,sandragrace@gmail.com,"1431 Ocean Ave #919 Santa Monica, CA 90401",FALSE,,FALSE
-Justin,Davis,949-973-3704,freynoso@alliance-clinical-research.com,"806 East Avenida Pico I-292  San Clemente, CA 92673",FALSE,,FALSE
-Florianne,Davis,540-630-1586,freynoso@alliance-clinical-research.com,"806 East Avenida Pico I-292  San Clemente, CA 92673",FALSE,,FALSE
-Adam,Harris,949-202-8969,adambharris10@gmail.com,"16007 Legacy Rd #206 Tustin, CA 92782",FALSE,,FALSE
-Allie,Harris,949-202-8969,adambharris10@gmail.com,"16007 Legacy Rd #206 Tustin, CA 92782",FALSE,,FALSE
-Brian,Hastings,570-262-4155,sonyabubulka904@gmail.com,"100 N Federal Hwy #830 Fort Lauderdale, FL 33301",FALSE,,FALSE
-Sonya,Hastings,484-542-0203,sonyabubulka904@gmail.com,"100 N Federal Hwy #830 Fort Lauderdale, FL 33301",FALSE,,FALSE
-Spencer,Moss,949-280-1490,spencebm@usd.edu,"109 Bayside Pl. Corona Del Mar, CA 92625",FALSE,,FALSE
-Kimmie,Glass,949-280-1490,spencebm@usd.edu,"109 Bayside Pl. Corona Del Mar, CA 92625",FALSE,,FALSE
-Cara,Sprunk,310-948-6518,ryanwinn77@gmail.com,"10645 Blythe Ave  Los Angeles, CA 90064",FALSE,,FALSE
-Ryan,Winn,310-948-6518,ryanwinn77@gmail.com,"10645 Blythe Ave  Los Angeles, CA 90064",FALSE,,FALSE
-Martin,Moss,818-222-1288,hymoss001@aol.com,"4517 Alta Tupelo Dr. Calabasas, CA 91302",FALSE,,FALSE
-Jill,Moss,818-222-1288,hymoss001@aol.com,"4517 Alta Tupelo Dr. Calabasas, CA 91302",FALSE,,FALSE
-Jay ,Moss,949-306-3206,jmoss@realestatedimensions.org,"109 Bayside Place, Corona del Mar, CA 92625",FALSE,,FALSE
-Diana,Moss,949-208-2002,ladydi25@aol.com,"109 Bayside Place, Corona del Mar, CA 92625",FALSE,,FALSE
-Shelby,Moss,949-208-2002,ladydi25@aol.com,"109 Bayside Place, Corona del Mar, CA 92625",FALSE,,FALSE
-Bonnie ,Miller ,650-218-4150,bonbon341@gmail.com,"720 Coronado Lane, Foster City, CA 94404",FALSE,,FALSE
-Robert ,Miller ,650-218-4150,bonbon341@gmail.com,"720 Coronado Lane, Foster City, CA 94404",FALSE,,FALSE
-David,Moss,818-222-1288,davemoss72@hotmail.com,"416 Wildrose Ave., Monrovia, CA 91016",FALSE,,FALSE
-Brett,Hyman,818-917-6050,bnhyman@gmail.com,740 N Curson Ave Los Angeles CA 90046,FALSE,,FALSE
-Ashley,Jackson,818-917-6050,bnhyman@gmail.com,740 N Curson Ave Los Angeles CA 90046,FALSE,,FALSE
-Leah,Moss,818-667-9926,donaleah75@yahoo.com,"4202 Whitsett Ave. Unit 204, Studio City, CA 91604",FALSE,,FALSE
-Mitch,Stever,818-667-9926,donaleah75@yahoo.com,"4202 Whitsett Ave. Unit 204, Studio City, CA 91604",FALSE,,FALSE
-Allison,Chalfin,818-209-1084,shoppeali@yahoo.com,"5133 Teesdale Ave., Los Angeles, CA 91607",FALSE,,FALSE
-David ,Chalfin,818-209-1084,shoppeali@yahoo.com,"5133 Teesdale Ave., Los Angeles, CA 91607",FALSE,,FALSE
-Jason,Miller,650-465-2497,jason.s.miller@gmail.com,"403 Main St. Apt. 817N, San Francisco, CA 94105",FALSE,,FALSE
-Yira,Aleman Miller,619-306-3215,jason.s.miller@gmail.com,"403 Main St. Apt. 817N, San Francisco, CA 94105",FALSE,,FALSE
-Mary,Tohidi,858-442-0542,mary.tohidi@gmail.com,"8204 Carriage Lane, Fairmont, WV 26554",FALSE,,FALSE
-Behrooz,Tohidi,858-869-5114,behrooztohidi@scbglobal.net,"8204 Carriage Lane, Fairmont, WV 26554",FALSE,,FALSE
-Judy,Kopstein,203-829-7259,judyjay55@sbcglobal.net,"3333 Henry Hudson Pkwy Apt 88 Bronx, New York 10463-3255",FALSE,,FALSE
-Jay,Kopstein,203-829-7259,judyjay55@sbcglobal.net,"3333 Henry Hudson Pkwy Apt 88 Bronx, New York 10463-3255",FALSE,,FALSE
-Andi,Yoshino,949-690-1048,kyoshinodpt@gmail.com,"34162 Cambridge Road, Dana Point, CA 92629",FALSE,,FALSE
-Ken,Yoshino,949-690-1048,kyoshinodpt@gmail.com,"34162 Cambridge Road,  Dana Point, CA 92629",FALSE,,FALSE
-Kenji,Yoshino,949-910-8449,kenjiyoshino22@gmail.com,"1830 Radius Drive #908 Hollywood, FL 33020",FALSE,,FALSE
-Aaron,Friedberg,949-677-1880,afriedberg90@gmail.com,"284 Cabrillo St. #B  Costa Mesa, CA 92627",FALSE,,FALSE
-Jen,Breslin,949-677-1880,afriedberg90@gmail.com,"284 Cabrillo St. #B  Costa Mesa, CA 92627",FALSE,,FALSE
-Alex ,Powell,310-408-8878,Alexanderpowell7@gmail.com,"1525 Placentia Ave M-4  Newport Beach, CA 92663",FALSE,,FALSE
-Kristina ,Powell,310-408-8878,Alexanderpowell7@gmail.com,"1525 Placentia Ave M-4  Newport Beach, CA 92663",FALSE,,FALSE
-David,Ross,949-413-5055,davidross35@aol.com,"2 Windwood  Irvine, CA 92604",FALSE,,FALSE
-Micaela,Ross,949-413-5055,davidross35@aol.com,"2 Windwood  Irvine, CA 92604",FALSE,,FALSE
-Daniel,Plon,949-294-6669,dmplon@gmail.com,"12 Suncreek, Irvine, CA 92604",FALSE,,FALSE
-Michael,Yen,626-665-2796,michael.y.yen@gmail.com,"24515 Avenida De Marcia  Yorba Linda, CA 92887",FALSE,,FALSE
-Yami,Yen,626-665-2796,michael.y.yen@gmail.com,"24525 Avendia De Marcia  Yorba Linda, CA 92887",FALSE,,FALSE
-Meryl,Rich,949-413-4309,merylrich@gmail.com,"7 Laurelglen, Irvine, CA 92614",FALSE,,FALSE
-Sean,Skelton,949-413-4309,seanskelton1223@aol.com,"7 Laurelglen, Irvine, CA 92614",FALSE,,FALSE
-Solomon ,Mindlin,818-309-6264,solomon.mindlin@gmail.com,"6056 Sunnycrest Dr.  Oak Park, CA 91377",FALSE,,FALSE
-Arya,Tohidi,858-245-1988,arya.tohidi@gmail.com,"8520 Costa Verde Blvd. Apt 3420, San Diego, CA 92122",FALSE,,FALSE
-Ryan ,Ferguson,949-294-0628,rafergus@gmail.com,"510 Delaware Apt #209, Kansas City, MO 64105",FALSE,,FALSE
-Alexis,Rich,917-753-8997,alrich@gmail.com,"1300 E Columbia Ave, Philadelphia, PA 19125",FALSE,,FALSE
-Juan,Chami,917-753-8997,juancham@gmail.com,"1300 E Columbia Ave, Philadelphia, PA 19125",FALSE,,FALSE
-Krystal,Giron,323-551-8955,krystalhenriquez@gmail.com,"24540 Ebelden Ave Newhall, CA 91321",FALSE,,FALSE
-Jesse,Giron,323-551-8955,krystalhenriquez@gmail.com,"24540 Ebelden Ave Newhall, CA 91321",FALSE,,FALSE
-Liliana,Burneo-Brown,310-722-6488,lilianabrown@me.com,"2160 Century Park East Apt 905 Los Angeles, CA 90057",FALSE,,FALSE
-AM,Grobelny,823-330-0958,amsg@amazon.com,"820 Lenora St Unit 1808 Seattle, WA 98121",FALSE,,FALSE
-Taylor,Grobelny,281-507-6551,taylorjunemann@gmail.com,"820 Lenora St Unit 1808 Seattle, WA 98121",FALSE,,FALSE
-Molly,Christ,503-504-9389,mollychrist@ucla.edu,"725 S. Bixel St Apt 755 Los Angeles, CA 90017",FALSE,,FALSE
-Karina,Yeznaian,818-445-8170,karinayeznaian@gmail.com,"245 N Pacific Ave Glendale, CA 91203",FALSE,,FALSE
-Lisa,Phillips,213-999-9190,lisa@madheart.com,"2472 Rutland Place Thousand Oaks, CA 91362",FALSE,,FALSE
-Liam,Phillips,213-999-9190,lisa@madheart.com,"2472 Rutland Place Thousand Oaks, CA 91362",FALSE,,FALSE
-Sandy,Carter,650-587-8166,scarter2911@gmail.com,"4549 88th Ave SE Mercer Island, WA 98040",FALSE,,FALSE
-Todd,Carter,650-587-8166,scarter2911@gmail.com,"4549 88th Ave SE Mercer Island, WA 98040",FALSE,,FALSE
-Melissa,Gruys,602-859-3555,selbstm@yahoo.com,"9701 N 3rd Drive Phoenix, AZ 85021",FALSE,,FALSE
-Bruce,Gruys,602-859-3555,selbstm@yahoo.com,"9701 N 3rd Drive Phoenix, AZ 85021",FALSE,,FALSE
-Ian,Gruys,602-859-3555,selbstm@yahoo.com,"9701 N 3rd Drive Phoenix, AZ 85021",FALSE,,FALSE
-Gregorio,Rojas,310-387-0920,gregorio@sabio.la,"5710 Crescent Park East Unit 205 Playa Vista, CA 90094",FALSE,,FALSE
-Liliana,Rojas,562-307-7589,liliana@sabio.la,"5710 Crescent Park East Unit 205 Playa Vista, CA 90094",FALSE,,FALSE
-Tom,Brecht,816-519-6154,tom@1iota.com,"27274 Rexton Way Santa Clarita, CA 91350",FALSE,,FALSE
-Stacy,Brecht,816-405-2580,stacy.brecht@gmail.com,"27274 Rexton Way Santa Clarita, CA 91350",FALSE,,FALSE
-Tara,Walker,770-315-1009,taraew@live.com,"6177 Grovecrest Way Austell, GA 30168",FALSE,,FALSE
-Nancy,Bowman,949-706-1722,nancybowmanhb@aol.com,"403 Jasmine Ave Corona Del Mar, CA 92625",FALSE,,FALSE
-David,Bowman,949-706-1722,nancybowmanhb@aol.com,"403 Jasmine Ave Corona Del Mar, CA 92625",FALSE,,FALSE
-Theresa,Ontiveros,714-423-4173,tontiveros@cox.net,"42 Whitewall Newport Beach, CA 92660",FALSE,,FALSE
-Eric,Onitveros,714-423-4173,tontiveros@cox.net,"42 Whitewall Newport Beach, CA 92660",FALSE,,FALSE
-Sonia,Delugo,678-488-4773,sdelugo@yahoo.com,"4114 Hillhouse Road SW Smyrna, Georgia 30082",FALSE,,FALSE
-Mike,Delugo,678-488-4773,sdelugo@yahoo.com,"4114 Hillhouse Road SW Smyrna, Georgia 30082",FALSE,,FALSE
-Austen,Delugo,312-860-7585,austendelugo@gmail.com,"845 1/2 W 53rd St Los Angeles, CA 90037",FALSE,,FALSE
-Diane,Schmetzer,714-906-0656,diane@decoratingdoneright.com,"1551 Kensing Lane North Tustin, CA 92705",FALSE,,FALSE
-Tony,Schmetzer,714-906-0656,diane@decoratingdoneright.com,"1551 Kensing Lane North Tustin, CA 92705",FALSE,,FALSE
-Michelle,McMillen,925-998-5162,petenmichelle@sbcglobal.net,"28550 North Quarry Drive Josphine, AL 36530",FALSE,,FALSE
-Pete,McMillen,925-998-5162,petenmichelle@sbcglobal.net,"28550 North Quarry Drive Josphine, AL 36530",FALSE,,FALSE
-Susan,Kaplan,949-559-0816,sfkaplan@msn.com,"16 Brandywine Irvine, CA 92620",FALSE,,FALSE
-Steve,Kaplan,949-559-0816,sfkaplan@msn.com,"16 Brandywine Irvine, CA 92620",FALSE,,FALSE
-Tracy,Pruitt,908-268-0556,kurt_tracy_pruitt@msn.com,"12322 Kensington Rd Los Alamitos, CA 90720",FALSE,,FALSE
-Kurt,Pruitt,908-268-0556,kurt_tracy_pruitt@msn.com,"12322 Kensington Rd Los Alamitos, CA 90720",FALSE,,FALSE
-Kari,Kerr,714-319-1396,karikerr@cox.net,"30 New Dawn Irvine, CA 92620",FALSE,,FALSE
-Bob,Ogden,714-319-1396,karikerr@cox.net,"30 New Dawn Irvine, CA 92620",FALSE,,FALSE
-Vince,Ciavarella,714-624-2667,catlaur@cox.net,"36 Fortuna Irvine, CA 92620",FALSE,,FALSE
-Sara,Ciavarella,714-624-2667,catlaur@cox.net,"36 Fortuna Irvine, CA 92620",FALSE,,FALSE
-Sue,Bishop,714-356-0174,robbish1@cox.net,"528 Shadow Oaks Irvine, CA 92618",FALSE,,FALSE
-Bob,Bishop,714-356-0174,robbish1@cox.net,"528 Shadow Oaks Irvine, CA 92618",FALSE,,FALSE
-Mary,Sadler,949-212-2273,sadler.mary@ymail.com,"212 Emerald Ave Newport Beach, CA 92662",FALSE,,FALSE
-Ron,Sadler,949-212-2273,sadler.mary@ymail.com,"212 Emerald Ave Newport Beach, CA 92662",FALSE,,FALSE
-Ardalon,Babaknia,949-233-1808,rbbabaknia@yahoo.com,"10 Rue Chantilly Newport Beach, CA 92660",FALSE,,FALSE
-Rita,Babaknia,949-233-1404,rbbabaknia@yahoo.com,"10 Rue Chantilly Newport Beach, CA 92660",FALSE,,FALSE
-Elena,Kashanchi,949-706-3183,elenakashanchi@gmail.com,"2515 Island View Dr Corona Del Mar, CA 92625",FALSE,,FALSE
-Massoud,Kashanchi,949-706-3183,elenakashanchi@gmail.com,"2515 Island View Dr Corona Del Mar, CA 92625",FALSE,,FALSE
-Susan,Ginsberg,949-933-6383,alidan1@aol.com,"21 San Antonio Newport Beach, CA 92660",FALSE,,FALSE
-Larry,Ginsberg,949-933-6383,alidan1@aol.com,"21 San Antonio Newport Beach, CA 92660",FALSE,,FALSE
-Steve,Meline,714-847-6602,melinelaw2@yahoo.com,"6761 Crista Palma Dr Huntington Beach, CA 92647",FALSE,,FALSE
-Karen,Meline,714-847-6602,melinelaw2@yahoo.com,"6761 Crista Palma Dr Huntington Beach, CA 92647",FALSE,,FALSE
-Jerry,Levine,714-293-8493,jeromelevine@ymail.com,"5815 E La Palma Ave Spc 102 Anaheim, CA 92807",FALSE,,FALSE
-Victoria,Levine,714-293-8493,jeromelevine@ymail.com,"5815 E La Palma Ave Spc 102 Anaheim, CA 92807",FALSE,,FALSE
-Suzanne,Wessman,949-302-9303,suzannester@yahoo.com,"2310 Park Newport Newport Beach, CA 92660",FALSE,,FALSE
-Greg,Wessman,949-302-9303,suzannester@yahoo.com,"2310 Park Newport Newport Beach, CA 92660",FALSE,,FALSE
-Kathy,Rolfes,949-244-0107,rolfes@adelphia.net,"1307 Bonnie Doone Terrace Newport Beach, CA 92625",FALSE,,FALSE
-Michael,Rolfes,949-244-0107,rolfes@adelphia.net,"1307 Bonnie Doone Terrace Newport Beach, CA 92625",FALSE,,FALSE
-Susan,Packouz,949-293-1129,susanpackouz123@icloud.com,"16452 Cararra Way Unit 301 Naples, FL 34110",FALSE,,FALSE
-Ron,Packouz,949-293-1129,susanpackouz123@icloud.com,"16452 Cararra Way Unit 301 Naples, FL 34110",FALSE,,FALSE
-Pam,Fossler,714-309-2889,pamfossler@mac.com,"3 Currents Newport Coast, CA 92657",FALSE,,FALSE
-Steve,Fossler,714-309-2889,pamfossler@mac.com,"3 Currents Newport Coast, CA 92657",FALSE,,FALSE
-Mike,Baltaxe,818-587-9266,mfbaltaxe@aol.com,"12761 Winter Ave Moorpark, CA 93021",FALSE,,FALSE
-Gail,Baltaxe,818-587-9266,mfbaltaxe@aol.com,"12761 Winter Ave Moorpark, CA 93021",FALSE,,FALSE
-Glenn,Westreich,415-994-0357,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,,FALSE
-Nancy,Westreich,415-994-0357,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,,FALSE
-Adam,Westreich,415-994-0357,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,,FALSE
-David,Westreich,415-994-0357,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,,FALSE
-Steve,Klein,310-880-2604,saklein@mednet.ucla.edu,"11918 Kiowa Ave # 301 Los Angeles, CA 90049",FALSE,,FALSE
-Bob,Klein,310-974-2674,bobjoan@pacbell.net,"10833 Wilshire Blvd #312 Los Angeles, CA 90024",FALSE,,FALSE
-Barbara,Sterling,310-974-2674,bobjoan@pacbell.net,"10833 Wilshire Blvd #312 Los Angeles, CA 90024",FALSE,,FALSE
-Cindy,Furst,949-683-5598,cynthiafurst@gmail.com,"100 Canyon Creek Irvine, CA 92603",FALSE,,FALSE
-Michael,Furst,949-683-5598,cynthiafurst@gmail.com,"100 Canyon Creek Irvine, CA 92603",FALSE,,FALSE
-Stephenie,Furst,949-838-7511,steph.furst123@gmail.com,"100 Morton Ave #D101 Ridley Park, PA 19078",FALSE,,FALSE
-Brett,Furst,949-525-1767,bfurst27@gmail.com,"25742 Nellie Gail Rd Laguna Hills, CA 92653",FALSE,,FALSE
-Jennifer,Furst,949-525-1767,bfurst27@gmail.com,"25742 Nellie Gail Rd Laguna Hills, CA 92653",FALSE,,FALSE
-Jules,Westreich,916-996-9653,jules@westreich.com,"5341 State Ave Sacramento, CA 95819",FALSE,,FALSE
-Allen,Westreich,916-996-9653,jules@westreich.com,"5341 State Ave Sacramento, CA 95819",FALSE,,FALSE
-Eric,Westreich,858-603-0753,eric@westreich.com,"12454 Cavallo St San Diego, CA 92130",FALSE,,FALSE
-Joanna,Westreich,858-603-0753,eric@westreich.com,"12454 Cavallo St San Diego, CA 92130",FALSE,,FALSE
-Barbara,Westreich,301-972-1114,bwestreich@verizon.net,"12109 Red Admiral Way Germantown, MD 20876",FALSE,,FALSE
-Barry,Westreich,301-972-1114,bwestreich@verizon.net,"12109 Red Admiral Way Germantown, MD 20876",FALSE,,FALSE
-Gilbert,Westreich,612-384-3022,gwest@comcast.net,"1779 Emerson Ave South Minneapolis, MN 55403",TRUE,,FALSE
-Laurie,Katz,714-273-7562,lauriekatz@cox.net,"19 Cervantes Newport Beach, CA 92660",FALSE,,FALSE
-Daniel,Katz,714-273-7562,lauriekatz@cox.net,"19 Cervantes Newport Beach, CA 92660",FALSE,,FALSE
-John,Pinches,562-225-3822,DrjlpIII@aol.com,"200 Pacific Coast Hwy #334 Huntington Beach, CA 92648",FALSE,,FALSE
-Camila,Pinches,562-225-3822,DrjlpIII@aol.com,"200 Pacific Coast Hwy #334 Huntington Beach, CA 92648",FALSE,,FALSE
-Steve ,Murphey,949-400-0687,stevemurphey@gmail.com,"383 Laperle Ln Costa Mesa, CA 92627",FALSE,,FALSE
-Celeste,Murphey,949-400-0687,stevemurphey@gmail.com,"383 Laperle Ln Costa Mesa, CA 92627",FALSE,,FALSE
-Jeff,Heimler,858-350-5854,jeffheimler@gmail.com,"4723 Thurston Place San Diego, CA 92130",FALSE,,FALSE
-Susan,Heimler,858-350-5854,jeffheimler@gmail.com,"4723 Thurston Place San Diego, CA 92130",FALSE,,FALSE
-Diane,Berlin,310-699-0350,hiphophapi@gmail.com,"521 Montana Ste 310 Santa Monica, CA 90403",FALSE,,FALSE
+firstName,lastName,email,address,plusOne,attending,groupId
+Justin,Stone,jds225@cornell.edu,"2030 8th Ave Unit 1805 Seattle, WA 98121",FALSE,FALSE,1
+Rena,Stone,rcstone2@cox.net,"3 Suncreek Irvine, CA 92604",FALSE,FALSE,2
+Steve,Stone,rcstone2@cox.net,"3 Suncreek Irvine, CA 92604",FALSE,FALSE,2
+Meryl,Stone,merylstone@gmail.com,"39 Delmar St San Francisco, CA 94117",FALSE,FALSE,3
+Ramin,Tohidi,ramin.tohidi@gmail.com,"39 Delmar St San Francisco, CA 94117",FALSE,FALSE,3
+Lynn,Stone,lynn.yudofsky@gmail.com,"1002 Roble Ave Apt #3 Menlo Park, CA 94025",FALSE,FALSE,4
+Matt,Stone,matthewstone5@gmail.com,"1002 Roble Ave Apt #3 Menlo Park, CA 94025",FALSE,FALSE,4
+Nicki,Klein,nicoleklein@me.com,"2030 8th Ave Unit 1805 Seattle, WA 98121",FALSE,FALSE,1
+Lori,Klein,kleinfamily333@me.com,23 San Antonio Newport Beach CA 92660,FALSE,FALSE,5
+Jeffery,Klein,jefferyklein@me.com,23 San Antonio Newport Beach CA 92660,FALSE,FALSE,5
+Cameron,Klein,cjk63@me.com,23 San Antonio Newport Beach CA 92260,FALSE,FALSE,5
+Hadley,Piper,hadley.piper8@gmail.com,"33521 Via de Agua San Juan Capistrano, CA 92675",FALSE,FALSE,6
+Breanna,Klein,breannalynnklein@gmail.com,"4344 Alabama St Apt 9 San Diego, CA 92104",FALSE,FALSE,7
+Monet,Bourguignon,monethartsyou@gmail.com,"302 Via Alegre San Clemente, CA 92672",FALSE,FALSE,8
+Ryan,Bourguignon,monethartsyou@gmail.com,"302 Via Alegre San Clemente, CA 92672",FALSE,FALSE,8
+Selina,Duran,selina.t.duran@gmail.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,FALSE,9
+Nick,Lipscomb,selina.t.duran@gmail.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,FALSE,9
+Ari,Gottesman,arigruys@gmail.com,"6522 E Thunderbird Road Scottsdale, AZ 85254",FALSE,FALSE,10
+Baruch,Gottesman,arigruys@gmail.com,"6522 E Thunderbird Road Scottsdale, AZ 85254",FALSE,FALSE,10
+Danielle,Napolitano,danipineira@gmail.com,1600 Ardmore Ave Unit 217 Hermosa Beach CA 90254,FALSE,FALSE,11
+Andy,Napolitano,danipineira@gmail.com,1600 Ardmore Ave Unit 217 Hermosa Beach CA 90254,FALSE,FALSE,11
+Kristina,Sidrak,ksidrak@gmail.com,"11738 Mayfield Ave #112 Los Angeles, CA 90049",TRUE,FALSE,12
+Natalie,Rodriguez,nrodmini@yahoo.com,"1516 Wicket Ct Concord, CA 94518",FALSE,FALSE,13
+Derek,Dahlin,nrodmini@yahoo.com,"1516 Wicket Ct Concord, CA 94518",FALSE,FALSE,13
+Alicia,Duran,alicia_d1@yahoo.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,FALSE,9
+Greg,Duran,alicia_d1@yahoo.com,1211 Folkstone Ave Hacienda Heights CA 91745,FALSE,FALSE,9
+Antoinette,Bishara,antoinettejbrou@gmail.com,"2000 North Commonwealth Ave Los Angeles, CA 90027",FALSE,FALSE,15
+Ryan,Bishara,antoinettejbrou@gmail.com,"2000 North Commonwealth Ave Los Angeles, CA 90027",FALSE,FALSE,15
+Melissa,Mahdavi,maderenzi@gmail.com,"9618 Exposition Blvd Apt 217 Los Angeles, CA 90034",FALSE,FALSE,14
+Babak,Mahdavi,maderenzi@gmail.com,"9618 Exposition Blvd Apt 217 Los Angeles, CA 90034",FALSE,FALSE,14
+Allie,Baca,abandreen@gmail.com,4376 5th St Riverside CA 92501,FALSE,FALSE,16
+Matthew,Baca,abandreen@gmail.com,4376 5th St Riverside CA 92501,FALSE,FALSE,16
+Amy,Ambard,amy_silva@me.com,"10482 Beryl Avenue Mentone, CA 92359",FALSE,FALSE,17
+Noah,Ambard,amy_silva@me.com,"10482 Beryl Avenue Mentone, CA 92359",FALSE,FALSE,17
+Brittany,Sundstrom,beedee1989@yahoo.com,"10484 Yosemite St Henderson, CO 80640",FALSE,FALSE,18
+Eric,Sundstrom,beedee1989@yahoo.com,"10484 Yosemite St Henderson, CO 80640",FALSE,FALSE,18
+Jenn,Zehenni,jzehenni@gmail.com,2132 Century Park Lane #412 Los Angeles CA 90067,FALSE,FALSE,19
+Steve,Metz,jzehenni@gmail.com,2132 Century Park Lane #412 Los Angeles CA 90067,FALSE,FALSE,19
+Rachel,Kent,rkent16@gmail.com,"218 15th St Manhattan Beach, CA 90266",FALSE,FALSE,20
+Mark,Paulsen,rkent16@gmail.com,"218 15th St Manhattan Beach, CA 90266",FALSE,FALSE,20
+Nadia,Terheggen,nadia.elharazin@gmail.com,"11017 Harvest Time Dr Austin, TX 78754",FALSE,FALSE,21
+Parker,Terheggen,nadia.elharazin@gmail.com,"11017 Harvest Time Dr Austin, TX 78754",FALSE,FALSE,21
+Greg,Snyder,funnytailguy@gmail.com,"7332 Arlington Garden St Las Vegas, NV 89166",FALSE,FALSE,22
+Sandra,Susino,sandragrace@gmail.com,"1431 Ocean Ave #919 Santa Monica, CA 90401",FALSE,FALSE,23
+Justin,Davis,freynoso@alliance-clinical-research.com,"806 East Avenida Pico I-292  San Clemente, CA 92673",FALSE,FALSE,24
+Florianne,Davis,freynoso@alliance-clinical-research.com,"806 East Avenida Pico I-292  San Clemente, CA 92673",FALSE,FALSE,24
+Adam,Harris,adambharris10@gmail.com,"16007 Legacy Rd #206 Tustin, CA 92782",FALSE,FALSE,25
+Allie,Harris,adambharris10@gmail.com,"16007 Legacy Rd #206 Tustin, CA 92782",FALSE,FALSE,25
+Brian,Hastings,sonyabubulka904@gmail.com,"100 N Federal Hwy #830 Fort Lauderdale, FL 33301",FALSE,FALSE,26
+Sonya,Hastings,sonyabubulka904@gmail.com,"100 N Federal Hwy #830 Fort Lauderdale, FL 33301",FALSE,FALSE,26
+Spencer,Moss,spencebm@usd.edu,"109 Bayside Pl. Corona Del Mar, CA 92625",FALSE,FALSE,27
+Kimmie,Glass,spencebm@usd.edu,"109 Bayside Pl. Corona Del Mar, CA 92625",FALSE,FALSE,27
+Cara,Sprunk,ryanwinn77@gmail.com,"10645 Blythe Ave  Los Angeles, CA 90064",FALSE,FALSE,28
+Ryan,Winn,ryanwinn77@gmail.com,"10645 Blythe Ave  Los Angeles, CA 90064",FALSE,FALSE,28
+Martin,Moss,hymoss001@aol.com,"4517 Alta Tupelo Dr. Calabasas, CA 91302",FALSE,FALSE,29
+Jill,Moss,hymoss001@aol.com,"4517 Alta Tupelo Dr. Calabasas, CA 91302",FALSE,FALSE,29
+Jay ,Moss,jmoss@realestatedimensions.org,"109 Bayside Place, Corona del Mar, CA 92625",FALSE,FALSE,30
+Diana,Moss,ladydi25@aol.com,"109 Bayside Place, Corona del Mar, CA 92625",FALSE,FALSE,30
+Shelby,Moss,ladydi25@aol.com,"109 Bayside Place, Corona del Mar, CA 92625",FALSE,FALSE,30
+Bonnie,Miller,bonbon341@gmail.com,"720 Coronado Lane, Foster City, CA 94404",FALSE,FALSE,31
+Robert,Miller,bonbon341@gmail.com,"720 Coronado Lane, Foster City, CA 94404",FALSE,FALSE,31
+David,Moss,davemoss72@hotmail.com,"416 Wildrose Ave., Monrovia, CA 91016",FALSE,FALSE,32
+Aimee,Moss,aimee@bluebirdsshowroom.com,"5325 Newcastle Ave. #201, Encino, CA 91316",FALSE,FALSE,33
+Brett,Hyman,bnhyman@gmail.com,740 N Curson Ave Los Angeles CA 90046,FALSE,FALSE,34
+Ashley,Jackson,bnhyman@gmail.com,740 N Curson Ave Los Angeles CA 90046,FALSE,FALSE,34
+Leah,Moss,donaleah75@yahoo.com,"4202 Whitsett Ave. Unit 204, Studio City, CA 91604",FALSE,FALSE,35
+Mitch,Stever,donaleah75@yahoo.com,"4202 Whitsett Ave. Unit 204, Studio City, CA 91604",FALSE,FALSE,35
+Allison,Chalfin,shoppeali@yahoo.com,"5133 Teesdale Ave., Los Angeles, CA 91607",FALSE,FALSE,36
+David ,Chalfin,shoppeali@yahoo.com,"5133 Teesdale Ave., Los Angeles, CA 91607",FALSE,FALSE,36
+Jason,Miller,jason.s.miller@gmail.com,"403 Main St. Apt. 817N, San Francisco, CA 94105",FALSE,FALSE,37
+Yira,Aleman Miller,jason.s.miller@gmail.com,"403 Main St. Apt. 817N, San Francisco, CA 94105",FALSE,FALSE,37
+Sara,Cooper,sarazamost@gmail.com,"1451 Hi Point St Unit 8 Los Angeles, CA 90036",FALSE,FALSE,42
+Josh,Cooper,sarazamost@gmail.com,"1451 Hi Point St Unit 8 Los Angeles, CA 90036",FALSE,FALSE,42
+Mary,Tohidi,mary.tohidi@gmail.com,"8204 Carriage Lane, Fairmont, WV 26554",FALSE,FALSE,49
+Behrooz,Tohidi,behrooztohidi@scbglobal.net,"8204 Carriage Lane, Fairmont, WV 26554",FALSE,FALSE,49
+Judy,Kopstein,judyjay55@sbcglobal.net,"3333 Henry Hudson Pkwy Apt 88 Bronx, New York 10463-3255",FALSE,FALSE,50
+Jay ,Kopstein,judyjay55@sbcglobal.net,"3333 Henry Hudson Pkwy Apt 88 Bronx, New York 10463-3255",FALSE,FALSE,50
+Neila,Bernstein,neilabernstein@gmail.com,"13 Woodfall, Irvine, CA 92604",FALSE,FALSE,51
+Andrew,Bernstein,neilabernstein@gmail.com,"13 Woodfall, Irvine, CA 92604",FALSE,FALSE,51
+Sheila,Dreyfuss,kdcrazi@gmail.com,"12 Cedarspring, Irvine, CA 92604",FALSE,FALSE,52
+Larry ,Dreyfuss,Uclarry@aol.com,"12 Cedarspring, Irvine, CA 92604",FALSE,FALSE,52
+Elaine,Fliesher,flifam@pacbell.net,"14 Beechwood, Irvine, CA 92604",FALSE,FALSE,53
+Harvey,Fliesher,flifam@pacbell.net,"14 Beechwood, Irvine, CA 92604",FALSE,FALSE,53
+Myra ,Ross,myra4maj@gmail.com,"33 Springwood, Irvine, CA 92604",FALSE,FALSE,54
+Barry ,Ross,myra4maj@gmail.com,"33 Springwood, Irvine, CA 92604",FALSE,FALSE,54
+Lisa,Rich,llrich@gmail.com,"7 Laurelglen, Irvine, CA 92614",FALSE,FALSE,55
+Robert,Rich,llrich@gmail.com,"7 Laurelglen, Irvine, CA 92614",FALSE,FALSE,55
+Andi,Yoshino,kyoshinodpt@gmail.com,"34162 Cambridge Road, Dana Point, CA 92629",FALSE,FALSE,63
+Ken,Yoshino,kyoshinodpt@gmail.com,"34162 Cambridge Road,  Dana Point, CA 92629",FALSE,FALSE,63
+Kenji,Yoshino,kenjiyoshino22@gmail.com,"1830 Radius Drive #908 Hollywood, FL 33020",FALSE,FALSE,64
+Aaron,Friedberg,afriedberg90@gmail.com,"284 Cabrillo St. #B  Costa Mesa, CA 92627",FALSE,FALSE,65
+Jen,Breslin,afriedberg90@gmail.com,"284 Cabrillo St. #B  Costa Mesa, CA 92627",FALSE,FALSE,65
+Alex ,Powell,Alexanderpowell7@gmail.com,"1525 Placentia Ave M-4  Newport Beach, CA 92663",FALSE,FALSE,66
+Kristina ,Powell,Alexanderpowell7@gmail.com,"1525 Placentia Ave M-4  Newport Beach, CA 92663",FALSE,FALSE,66
+David,Ross,davidross35@aol.com,"2 Windwood  Irvine, CA 92604",FALSE,FALSE,67
+Micaela,Ross,davidross35@aol.com,"2 Windwood  Irvine, CA 92604",FALSE,FALSE,67
+Daniel,Plon,dmplon@gmail.com,"12 Suncreek, Irvine, CA 92604",FALSE,FALSE,68
+Michael,Yen,michael.y.yen@gmail.com,"24515 Avenida De Marcia  Yorba Linda, CA 92887",FALSE,FALSE,69
+Yami,Yen,michael.y.yen@gmail.com,"24515 Avenida De Marcia  Yorba Linda, CA 92887",FALSE,FALSE,69
+Meryl,Rich,merylrich@gmail.com,"7 Laurelglen, Irvine, CA 92614",FALSE,FALSE,70
+Sean,Skelton,seanskelton1223@aol.com,"7 Laurelglen, Irvine, CA 92614",FALSE,FALSE,70
+Solomon ,Mindlin,solomon.mindlin@gmail.com,"6056 Sunnycrest Dr.  Oak Park, CA 91377",FALSE,FALSE,71
+Arya,Tohidi,arya.tohidi@gmail.com,"8520 Costa Verde Blvd. Apt 3420, San Diego, CA 92122",FALSE,FALSE,72
+Ryan ,Ferguson,rafergus@gmail.com,"510 Delaware Apt #209, Kansas City, MO 64105",FALSE,FALSE,73
+Alexis,Rich,alrich@gmail.com,"1300 E Columbia Ave, Philadelphia, PA 19125",FALSE,FALSE,74
+Juan,Chami,juancham@gmail.com,"1300 E Columbia Ave, Philadelphia, PA 19125",FALSE,FALSE,74
+Krystal,Giron,krystalhenriquez@gmail.com,"24540 Ebelden Ave Newhall, CA 91321",FALSE,FALSE,75
+Jesse,Giron,krystalhenriquez@gmail.com,"24540 Ebelden Ave Newhall, CA 91321",FALSE,FALSE,75
+Liliana,Burneo-Brown,lilianabrown@me.com,"2160 Century Park East Apt 905 Los Angeles, CA 90057",FALSE,FALSE,76
+AM,Grobelny,amsg@amazon.com,"820 Lenora St Unit 1808 Seattle, WA 98121",FALSE,FALSE,77
+Taylor,Grobelny,taylorjunemann@gmail.com,"820 Lenora St Unit 1808 Seattle, WA 98121",FALSE,FALSE,77
+Molly,Christ,mollychrist@ucla.edu,"725 S. Bixel St Apt 755 Los Angeles, CA 90017",FALSE,FALSE,78
+Karina,Yeznaian,karinayeznaian@gmail.com,"245 N Pacific Ave Glendale, CA 91203",FALSE,FALSE,79
+Lisa,Phillips,lisa@madheart.com,"2472 Rutland Place Thousand Oaks, CA 91362",FALSE,FALSE,80
+Liam,Phillips,lisa@madheart.com,"2472 Rutland Place Thousand Oaks, CA 91362",FALSE,FALSE,80
+Sandy,Carter,scarter2911@gmail.com,"4549 88th Ave SE Mercer Island, WA 98040",FALSE,FALSE,81
+Todd,Carter,scarter2911@gmail.com,"4549 88th Ave SE Mercer Island, WA 98040",FALSE,FALSE,81
+Melissa,Gruys,selbstm@yahoo.com,"9701 N 3rd Drive Phoenix, AZ 85021",FALSE,FALSE,82
+Bruce,Gruys,selbstm@yahoo.com,"9701 N 3rd Drive Phoenix, AZ 85021",FALSE,FALSE,82
+Ian,Gruys,selbstm@yahoo.com,"9701 N 3rd Drive Phoenix, AZ 85021",FALSE,FALSE,82
+Gregorio,Rojas,gregorio@sabio.la,"5710 Crescent Park East Unit 205 Playa Vista, CA 90094",FALSE,FALSE,83
+Liliana,Rojas,liliana@sabio.la,"5710 Crescent Park East Unit 205 Playa Vista, CA 90094",FALSE,FALSE,83
+Tom,Brecht,tom@1iota.com,"27274 Rexton Way Santa Clarita, CA 91350",FALSE,FALSE,84
+Stacy,Brecht,stacy.brecht@gmail.com,"27274 Rexton Way Santa Clarita, CA 91350",FALSE,FALSE,84
+Tara,Walker,taraew@live.com,"6177 Grovecrest Way Austell, GA 30168",FALSE,FALSE,85
+Nancy,Bowman,nancybowmanhb@aol.com,"403 Jasmine Ave Corona Del Mar, CA 92625",FALSE,FALSE,86
+David,Bowman,nancybowmanhb@aol.com,"403 Jasmine Ave Corona Del Mar, CA 92625",FALSE,FALSE,86
+Theresa,Ontiveros,tontiveros@cox.net,"42 Whitewall Newport Beach, CA 92660",FALSE,FALSE,87
+Eric,Onitveros,tontiveros@cox.net,"42 Whitewall Newport Beach, CA 92660",FALSE,FALSE,87
+Sonia,Delugo,sdelugo@yahoo.com,"4114 Hillhouse Road SW Smyrna, Georgia 30082",FALSE,FALSE,88
+Mike,Delugo,sdelugo@yahoo.com,"4114 Hillhouse Road SW Smyrna, Georgia 30082",FALSE,FALSE,88
+Austen,Delugo,austendelugo@gmail.com,"845 1/2 W 53rd St Los Angeles, CA 90037",FALSE,FALSE,89
+Diane,Schmetzer,diane@decoratingdoneright.com,"1551 Kensing Lane North Tustin, CA 92705",FALSE,FALSE,90
+Tony,Schmetzer,diane@decoratingdoneright.com,"1551 Kensing Lane North Tustin, CA 92705",FALSE,FALSE,90
+Michelle,McMillen,petenmichelle@sbcglobal.net,"28550 North Quarry Drive Josphine, AL 36530",FALSE,FALSE,91
+Pete,McMillen,petenmichelle@sbcglobal.net,"28550 North Quarry Drive Josphine, AL 36530",FALSE,FALSE,91
+Susan,Kaplan,sfkaplan@msn.com,"16 Brandywine Irvine, CA 92620",FALSE,FALSE,92
+Steve,Kaplan,sfkaplan@msn.com,"16 Brandywine Irvine, CA 92620",FALSE,FALSE,92
+Tracy,Pruitt,kurt_tracy_pruitt@msn.com,"12322 Kensington Rd Los Alamitos, CA 90720",FALSE,FALSE,93
+Kurt,Pruitt,kurt_tracy_pruitt@msn.com,"12322 Kensington Rd Los Alamitos, CA 90720",FALSE,FALSE,93
+Kari,Kerr,karikerr@cox.net,"30 New Dawn Irvine, CA 92620",FALSE,FALSE,94
+Bob,Ogden,karikerr@cox.net,"30 New Dawn Irvine, CA 92620",FALSE,FALSE,94
+Vince,Ciavarella,catlaur@cox.net,"36 Fortuna Irvine, CA 92620",FALSE,FALSE,95
+Sara,Ciavarella,catlaur@cox.net,"36 Fortuna Irvine, CA 92620",FALSE,FALSE,95
+Sue,Bishop,robbish1@cox.net,"528 Shadow Oaks Irvine, CA 92618",FALSE,FALSE,96
+Bob,Bishop,robbish1@cox.net,"528 Shadow Oaks Irvine, CA 92618",FALSE,FALSE,96
+Mary,Sadler,sadler.mary@ymail.com,"212 Emerald Ave Newport Beach, CA 92662",FALSE,FALSE,97
+Ron,Sadler,sadler.mary@ymail.com,"212 Emerald Ave Newport Beach, CA 92662",FALSE,FALSE,97
+Ardalon,Babaknia,rbbabaknia@yahoo.com,"10 Rue Chantilly Newport Beach, CA 92660",FALSE,FALSE,98
+Rita,Babaknia,rbbabaknia@yahoo.com,"10 Rue Chantilly Newport Beach, CA 92660",FALSE,FALSE,98
+Elena,Kashanchi,elenakashanchi@gmail.com,"2515 Island View Dr Corona Del Mar, CA 92625",FALSE,FALSE,99
+Massoud,Kashanchi,elenakashanchi@gmail.com,"2515 Island View Dr Corona Del Mar, CA 92625",FALSE,FALSE,99
+Susan,Ginsberg,alidan1@aol.com,"21 San Antonio Newport Beach, CA 92660",FALSE,FALSE,100
+Larry,Ginsberg,alidan1@aol.com,"21 San Antonio Newport Beach, CA 92660",FALSE,FALSE,100
+Steve,Meline,melinelaw2@yahoo.com,"6761 Crista Palma Dr Huntington Beach, CA 92647",FALSE,FALSE,101
+Karen,Meline,melinelaw2@yahoo.com,"6761 Crista Palma Dr Huntington Beach, CA 92647",FALSE,FALSE,101
+Jerry,Levine,jeromelevine@ymail.com,"5815 E La Palma Ave Spc 102 Anaheim, CA 92807",FALSE,FALSE,102
+Victoria,Levine,jeromelevine@ymail.com,"5815 E La Palma Ave Spc 102 Anaheim, CA 92807",FALSE,FALSE,102
+Suzanne,Wessman,suzannester@yahoo.com,"2310 Park Newport Newport Beach, CA 92660",FALSE,FALSE,103
+Greg,Wessman,suzannester@yahoo.com,"2310 Park Newport Newport Beach, CA 92660",FALSE,FALSE,103
+Kathy,Rolfes,rolfes@adelphia.net,"1307 Bonnie Doone Terrace Newport Beach, CA 92625",FALSE,FALSE,104
+Michael,Rolfes,rolfes@adelphia.net,"1307 Bonnie Doone Terrace Newport Beach, CA 92625",FALSE,FALSE,104
+Susan,Packouz,susanpackouz123@icloud.com,"16452 Cararra Way Unit 301 Naples, FL 34110",FALSE,FALSE,105
+Ron,Packouz,susanpackouz123@icloud.com,"16452 Cararra Way Unit 301 Naples, FL 34110",FALSE,FALSE,105
+Pam,Fossler,pamfossler@mac.com,"3 Currents Newport Coast, CA 92657",FALSE,FALSE,106
+Steve,Fossler,pamfossler@mac.com,"3 Currents Newport Coast, CA 92657",FALSE,FALSE,106
+Mike,Baltaxe,mfbaltaxe@aol.com,"12761 Winter Ave Moorpark, CA 93021",FALSE,FALSE,107
+Gail,Baltaxe,mfbaltaxe@aol.com,"12761 Winter Ave Moorpark, CA 93021",FALSE,FALSE,107
+Glenn,Westreich,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,FALSE,108
+Nancy,Westreich,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,FALSE,108
+Adam,Westreich,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,FALSE,108
+David,Westreich,gwestreich@gmail.com,"270 Stuyvesant Drive San Anselmo, CA 94960",FALSE,FALSE,108
+Steve,Klein,saklein@mednet.ucla.edu,"11918 Kiowa Ave # 301 Los Angeles, CA 90049",FALSE,FALSE,109
+Bob,Klein,bobjoan@pacbell.net,"10833 Wilshire Blvd #312 Los Angeles, CA 90024",FALSE,FALSE,110
+Barbara,Sterling,bobjoan@pacbell.net,"10833 Wilshire Blvd #312 Los Angeles, CA 90024",FALSE,FALSE,110
+Cindy,Furst,cynthiafurst@gmail.com,"100 Canyon Creek Irvine, CA 92603",FALSE,FALSE,111
+Michael,Furst,cynthiafurst@gmail.com,"100 Canyon Creek Irvine, CA 92603",FALSE,FALSE,111
+Stephenie,Furst,steph.furst123@gmail.com,"100 Morton Ave #D101 Ridley Park, PA 19078",FALSE,FALSE,112
+Brett,Furst,bfurst27@gmail.com,"25742 Nellie Gail Rd Laguna Hills, CA 92653",FALSE,FALSE,113
+Jennifer,Furst,bfurst27@gmail.com,"25742 Nellie Gail Rd Laguna Hills, CA 92653",FALSE,FALSE,113
+Jules,Westreich,jules@westreich.com,"5341 State Ave Sacramento, CA 95819",FALSE,FALSE,114
+Allen,Westreich,jules@westreich.com,"5341 State Ave Sacramento, CA 95819",FALSE,FALSE,114
+Eric,Westreich,eric@westreich.com,"12454 Cavallo St San Diego, CA 92130",FALSE,FALSE,115
+Joanna,Westreich,eric@westreich.com,"12454 Cavallo St San Diego, CA 92130",FALSE,FALSE,115
+Barbara,Westreich,bwestreich@verizon.net,"12109 Red Admiral Way Germantown, MD 20876",FALSE,FALSE,116
+Barry,Westreich,bwestreich@verizon.net,"12109 Red Admiral Way Germantown, MD 20876",FALSE,FALSE,116
+Gilbert,Westreich,gwest@comcast.net,"1779 Emerson Ave South Minneapolis, MN 55403",TRUE,FALSE,117
+Laurie,Katz,lauriekatz@cox.net,"19 Cervantes Newport Beach, CA 92660",FALSE,FALSE,118
+Daniel,Katz,lauriekatz@cox.net,"19 Cervantes Newport Beach, CA 92660",FALSE,FALSE,118
+John,Pinches,DrjlpIII@aol.com,"200 Pacific Coast Hwy #334 Huntington Beach, CA 92648",FALSE,FALSE,119
+Camila,Pinches,DrjlpIII@aol.com,"200 Pacific Coast Hwy #334 Huntington Beach, CA 92648",FALSE,FALSE,119
+Steve ,Murphey,stevemurphey@gmail.com,"383 Laperle Ln Costa Mesa, CA 92627",FALSE,FALSE,120
+Celeste,Murphey,stevemurphey@gmail.com,"383 Laperle Ln Costa Mesa, CA 92627",FALSE,FALSE,120
+Jeff,Heimler,jeffheimler@gmail.com,"4723 Thurston Place San Diego, CA 92130",FALSE,FALSE,121
+Susan,Heimler,jeffheimler@gmail.com,"4723 Thurston Place San Diego, CA 92130",FALSE,FALSE,121
+Diane,Berlin,hiphophapi@gmail.com,"521 Montana Ste 310 Santa Monica, CA 90403",FALSE,FALSE,122

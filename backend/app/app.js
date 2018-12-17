@@ -8,8 +8,10 @@ const awsServerlessExpressMiddleware = require('aws-serverless-express/middlewar
 const app = express()
 const router = express.Router()
 const AWS = require('aws-sdk');
+const dynamodbClient = new AWS.DynamoDB.DocumentClient({region: 'us-west-1'});
 const uuidv4 = require('uuid/v4');
-const dynamodbClient = new AWS.DynamoDB({ region: "us-west-1" });
+
+const tableName = "WeddingGuestList";
 
 app.set('view engine', 'pug')
 
@@ -28,15 +30,27 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 
 router.get('/guest', async (req, res) => {
-  console.log(req.query);
   let response = await find(req.query);
-  res.json(response);
-})
 
+  if(response.Item) {
+    let completeGroup = await findByGroup(response.Item.groupId);
+    res.json(completeGroup.Items);
+  }
+  else{
+    res.json(response);
+  }
+
+  
+})
 
 router.put('/guest', async (req, res) => {
  let response = await insertPlusOne(req.body);
   res.json(response);
+})
+
+router.post('/guest', async(req, res) => {
+  let updateResponse = await updateGuestAttending(req.body);
+  res.json(updateResponse);
 })
 
 const insertPlusOne = async(body) => {
@@ -66,10 +80,13 @@ const insertPlusOne = async(body) => {
           },
           "attending": {
               "BOOL": true
+          },
+          "groupId": {
+            "S": body.groupId
           }
         }, 
       ReturnConsumedCapacity: "TOTAL", 
-      TableName: "GuestList"
+      TableName: tableName
      };
   try{
     let data = await dynamodbClient.putItem(params).promise();
@@ -80,25 +97,66 @@ const insertPlusOne = async(body) => {
 
 }
 
-const find = async(params) => {
-console.log(params);
+const find = async(query) => {
+
   var params = {
-      TableName : "GuestList",
-      KeyConditionExpression: "firstName = :firstName and lastName = :lastName",
-      ExpressionAttributeValues: {
-          ":firstName": params.firstName,
-          ":lastName": params.lastName
-      }
+    TableName: tableName,
+    Key:{
+        "firstName": query.firstName,
+        "lastName": query.lastName
+    }
   };
 
   try{
-    let data = await dynamodbClient.query(params).promise();
-    console.log(data);
+    let data = await dynamodbClient.get(params).promise();
     return data;
   } catch(error) {
       return error;
   }
 
+}
+
+const findByGroup = async(groupId) => {
+
+  var params = { 
+    TableName: tableName,
+    IndexName: 'groupId-index',
+    KeyConditionExpression: 'groupId = :group_id',
+    ExpressionAttributeValues: { ':group_id': groupId} 
+   }
+
+try{
+  let data = await dynamodbClient.query(params).promise();
+  console.log(data);
+  return data;
+} catch(error) {
+    return error;
+}
+}
+
+const updateGuestAttending = async(guest) => {
+
+  var params = {
+    TableName:tableName,
+    Key:{
+        "firstName": guest.firstName,
+        "lastName": guest.lastName
+    },
+    UpdateExpression: "set attending=:attend, foodChoice=:food",
+    ExpressionAttributeValues:{
+        ":attend": guest.attending,
+        ":food": guest.foodChoice
+    },
+    ReturnValues:"UPDATED_NEW"
+  };
+  console.log(params);
+  try{
+    let data = await dynamodbClient.update(params).promise();
+    console.log(data);
+    return data;
+  } catch(error) {
+      return error;
+  }
 }
 
 // The aws-serverless-express library creates a server and listens on a Unix
