@@ -3,13 +3,13 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Serverless Express Application/API powered by API Gateway and Lambda
 Resources:
-  ApiGatewayApi:
+  WeddingApi:
     Type: AWS::Serverless::Api
     Properties:
       DefinitionUri: ./simple-proxy-api.yaml
       StageName: prod
       Variables:
-        ServerlessExpressLambdaFunctionName: !Ref AwsServerlessExpressFunction
+        ServerlessExpressLambdaFunctionName: !Ref WeddingBackendLambda
 
   LambdaExecutionRole:
     Type: AWS::IAM::Role
@@ -33,12 +33,27 @@ Resources:
             - logs:CreateLogStream
             - logs:PutLogEvents
             Resource: arn:aws:logs:*:*:*
+      - PolicyName: dynamoPolicy
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action:
+            - dynamodb:BatchWriteItem
+            - dynamodb:DeleteItem
+            - dynamodb:GetItem
+            - dynamodb:GetRecords
+            - dynamodb:PutItem
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:UpdateItem
+            Resource: arn:aws:dynamodb:us-west-1:805580953652:*
 
   LambdaApiGatewayExecutionPermission:
     Type: AWS::Lambda::Permission
     Properties:
       Action: lambda:InvokeFunction
-      FunctionName: !GetAtt AwsServerlessExpressFunction.Arn
+      FunctionName: !GetAtt WeddingBackendLambda.Arn
       Principal: apigateway.amazonaws.com
       SourceArn: !Join
         - ''
@@ -47,10 +62,10 @@ Resources:
           - ":"
           - !Ref AWS::AccountId
           - ":"
-          - !Ref ApiGatewayApi
+          - !Ref WeddingApi
           - "/*/*"
 
-  AwsServerlessExpressFunction:
+  WeddingBackendLambda:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: ./
@@ -63,13 +78,13 @@ Resources:
         ProxyApiRoot:
           Type: Api
           Properties:
-            RestApiId: !Ref ApiGatewayApi
+            RestApiId: !Ref WeddingApi
             Path: /
             Method: ANY
         ProxyApiGreedy:
           Type: Api
           Properties:
-            RestApiId: !Ref ApiGatewayApi
+            RestApiId: !Ref WeddingApi
             Path: /{proxy+}
             Method: ANY
 
@@ -83,9 +98,9 @@ Outputs:
         - ".console.aws.amazon.com/lambda/home?region="
         - !Ref AWS::Region
         - "#/functions/"
-        - !Ref AwsServerlessExpressFunction
+        - !Ref WeddingBackendLambda
 
-  ApiGatewayApiConsoleUrl:
+  WeddingApiConsoleUrl:
     Description: Console URL for the API Gateway API's Stage.
     Value: !Join
       - ''
@@ -94,7 +109,7 @@ Outputs:
         - ".console.aws.amazon.com/apigateway/home?region="
         - !Ref AWS::Region
         - "#/apis/"
-        - !Ref ApiGatewayApi
+        - !Ref WeddingApi
         - "/stages/prod"
 
   ApiUrl:
@@ -103,7 +118,7 @@ Outputs:
     Value: !Join
       - ''
       - - https://
-        - !Ref ApiGatewayApi
+        - !Ref WeddingApi
         - ".execute-api."
         - !Ref AWS::Region
         - ".amazonaws.com/prod/"

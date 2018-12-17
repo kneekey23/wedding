@@ -30,10 +30,12 @@ router.use(awsServerlessExpressMiddleware.eventContext())
 
 
 router.get('/guest', async (req, res) => {
+
   let response = await find(req.query);
 
   if(response.Item) {
     let completeGroup = await findByGroup(response.Item.groupId);
+ 
     res.json(completeGroup.Items);
   }
   else{
