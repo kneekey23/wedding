@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Carousel,Modal, Button } from 'react-bootstrap';
 import {API_ROOT} from '../constants';
 import {RadioGroup, Radio} from 'react-radio-group';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { RouteComponentProps } from 'react-router';
 
 export class RSVP extends React.Component {
@@ -24,6 +25,8 @@ export class RSVP extends React.Component {
       this.next = this.next.bind(this);
       this.back = this.back.bind(this);
       this.handleAttendingRadio = this.handleAttendingRadio.bind(this);
+      this.handleFoodRadio = this.handleFoodRadio.bind(this);
+      this.sendRsvp = this.sendRsvp.bind(this);
    }
 
    handleFirstNameChange(e){
@@ -40,12 +43,24 @@ export class RSVP extends React.Component {
       this.setState({guests: guests});
    }
 
+   handleFoodRadio(e, i) {
+      let guests = this.state.guests;
+      guests[i].foodChoice = e;
+      this.setState({guests: guests});
+   }
+
    next() {
       const prevIndex = this.state.index;
       this.setState({
          direction: 'next',
          index: prevIndex + 1
+      }, () => {
+         if(this.state.index > 1){
+            this.forceUpdate();
+         }
       })
+      
+      
     }
 
     back() {
@@ -88,7 +103,50 @@ export class RSVP extends React.Component {
          })
    }
 
+   sendRsvp() {
+      let url = `${API_ROOT}guest`;
+      this.state.guests.forEach((val, i) => {
+         console.log(val);
+         fetch(url, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(val)
+            })
+            .then(response => response.json())
+            .then((result) => {
+                  this.handleClose();
+            },
+            (error) => {
+               console.log(error);
+            
+            })
+      })
+
+   }
+
     render() {
+      let CarouselConfirmationPage;
+      if(this.state.guests.length > 0){
+         CarouselConfirmationPage = <Carousel.Item key={this.state.guests.length}>
+                                       {this.state.guests.map((guest) => {
+                                          let icon;
+                                          if(guest.attending){
+                                             icon = <FontAwesomeIcon className="mr-5 attendingCheck" icon="check" />
+                                          }
+                                          else{
+                                             icon = <FontAwesomeIcon className="mr-5 attendingX" icon="times" />
+                                          }
+                                          return (<div className="rsvpGuestName">
+                                                   {icon}
+                                                   {guest.firstName + ' ' + guest.lastName}
+                                                   </div>)
+                                       })}
+                                       <Button onClick={this.sendRsvp} className="rsvp-modal-button">Send Rsvp</Button>
+                                    </Carousel.Item>
+      }
       const { index, direction } = this.state;
         return ( <section id="rsvp" className="rsvp bg-grey pt-120 pb-120 ">
         <div className="container">
@@ -127,29 +185,37 @@ export class RSVP extends React.Component {
           </Modal.Header>
           <Modal.Body>
           <span className="rsvpTitle">Nicki  &amp; Justin</span>
+          <hr className="rsvp-hr"></hr>
           <Carousel indicators={false} controls={false} activeIndex={index} direction={direction} onSelect={this.handleSelect}>
             {this.state.guests.map((guest, i) => {
 
                 return (<Carousel.Item key={i}>
                      <div id="view10" className="rsvp-view">
-                        <p className="rsvp-guest-counter">Guest {i + 1} of {this.state.guests.length}:</p>
+                        <p className="rsvp-guest-counter pb">Guest {i + 1} of {this.state.guests.length}:</p>
                         <p className="rsvp-guest-name">{guest.firstName + " " + guest.lastName}</p>
                         <div className="rsvp-events-list">
                               <div className="rsvp-event-name">Nicki & Justin's Wedding</div>
                               <div className="rsvp-event-datetime">
                                     <span>May 11, 2019</span>
-                                    <span className="datetime-divider">|</span> 
+                                    <span className="datetime-divider"> | </span> 
                                     <span>6:00 PM</span>
                               </div>
-                              <RadioGroup name={'attending' + i} selectedValue={guest.attending} onChange={(e) => this.handleAttendingRadio(e, i)}>
-                                 <Radio value="true" />Accept
-                                 <Radio value="false" />Regret
+                              <RadioGroup name={'attending' + i} selectedValue={guest.attending} onChange={(e) => this.handleAttendingRadio(e, i)} className="radioGroup">
+                              <Radio id={'attending' + guest.firstName} value="true"/><label className="leftAttendingLabel" for={'attending' + guest.firstName}>Accept</label>
+                              <Radio id={'attending' + guest.lastName} value="false"/><label className="rightAttendingLabel" for={'attending' + guest.lastName}>Regret</label>
                               </RadioGroup>
-            
+                              <div className="foodChoice">
+                              <span class="foodChoice">Please indicate food preference:</span>
+                              <RadioGroup name={'attending' + i+1} selectedValue={guest.foodChoice} onChange={(e) => this.handleFoodRadio(e, i)} className="radioGroup">
+                              <Radio id={'attending' + guest.firstName + 1} value="fish"/><label className="leftAttendingLabel" for={'attending' + guest.firstName + 1}><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
+                              <Radio id={'attending' + guest.lastName + 1} value="meat"/><label className="rightAttendingLabel" for={'attending' + guest.lastName + 1}><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
+                              </RadioGroup>
+                              </div>
                         </div>
                      </div>
                </Carousel.Item>)
                   })}
+                  {CarouselConfirmationPage}
             </Carousel>
           </Modal.Body>
           <Modal.Footer>

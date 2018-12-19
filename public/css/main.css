@@ -821,8 +821,6 @@ blockquote {
     font-weight: normal;
 }
 
-
-
 .rsvp-guest-counter {
     text-align: center;
 }
@@ -886,6 +884,92 @@ input[type="radio"] {
     cursor: pointer;
 }
 
+.carousel {
+    padding-top:20px;
+}
+
+.rsvp-hr {
+    border: 1px solid #e4e1e1;
+    margin-top: 0px;
+    width: 30%;
+    min-width: 100px;
+    margin-left: 35%;
+}
+
+.pb {
+    padding-bottom: 15px;
+}
+
+.radioGroup {
+    padding-top: 10px;
+}
+
+.radioGroup label, .radioGroup input {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.radioGroup input[type="radio"] {
+    opacity:0.01;
+    z-index:100;
+    position: absolute;
+}
+
+.radioGroup input[type="radio"]:checked + label,
+.Checked + label {
+    background:#800020;
+    color: white;
+}
+
+.radioGroup label {
+     padding:6px 12px;
+   
+     cursor:pointer;
+    z-index:90;
+    
+}
+
+.leftAttendingLabel {
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #c3c3c3;
+
+    
+}
+
+.rightAttendingLabel {
+    border-radius: 0 5px 5px 0;
+    border-right: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
+    border-top: 1px solid #c3c3c3;
+}
+
+.radioGroup label:hover {
+     background:#DDD;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.foodChoice {
+    margin-top:10px;
+    font-size: 13.5px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.attendingCheck {
+    color: green;
+}
+.attendingX {
+    color: red;
+}
+
+.rsvpGuestName {
+    padding: 5px;
+}
 /*Media queries*/
 
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) and (orientation: portrait) {
