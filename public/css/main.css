@@ -861,6 +861,8 @@ blockquote {
     position: relative;
     color: #ffffff;
     border: none;
+    width: 100%;
+    height:42px;
 }
 
 input[type="radio"] {

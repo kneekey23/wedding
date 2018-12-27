@@ -3,6 +3,8 @@ import { Carousel,Modal, Button } from 'react-bootstrap';
 import {API_ROOT} from '../constants';
 import {RadioGroup, Radio} from 'react-radio-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 //import { RouteComponentProps } from 'react-router';
 
 export class RSVP extends React.Component {
@@ -118,12 +120,23 @@ export class RSVP extends React.Component {
             .then(response => response.json())
             .then((result) => {
                   this.handleClose();
+                  
             },
             (error) => {
                console.log(error);
             
             })
       })
+
+      toast.success('Your RSVP has been saved! Thanks!', {
+         position: "top-right",
+         autoClose: 5000,
+         hideProgressBar: true,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+         });
+      
 
    }
 
@@ -133,13 +146,13 @@ export class RSVP extends React.Component {
          CarouselConfirmationPage = <Carousel.Item key={this.state.guests.length}>
                                        {this.state.guests.map((guest) => {
                                           let icon;
-                                          if(guest.attending){
+                                          if(guest.attending === 'true'){
                                              icon = <FontAwesomeIcon className="mr-5 attendingCheck" icon="check" />
                                           }
                                           else{
                                              icon = <FontAwesomeIcon className="mr-5 attendingX" icon="times" />
                                           }
-                                          return (<div className="rsvpGuestName">
+                                          return (<div key={guest.firstName + 1} className="rsvpGuestName">
                                                    {icon}
                                                    {guest.firstName + ' ' + guest.lastName}
                                                    </div>)
@@ -157,7 +170,8 @@ export class RSVP extends React.Component {
               </div>
               <div className="col-md-5 col-sm-5 ">
                  <div className="block-registry">
-                  <h2 className="heavy normal mb-30">You can RSVP to our wedding here</h2>
+                  <h2 className="heavy normal mb-30">RSVP to our wedding here</h2>
+                  <ToastContainer position="top-right" autoClose={5000} closeOnClick rtl={false} pauseOnVisibilityChange draggable pauseOnHover/>
                     <form className="registry-form">
                        <div className="input-columns clearfix">
                           <div className="column-1">
@@ -201,16 +215,19 @@ export class RSVP extends React.Component {
                                     <span>6:00 PM</span>
                               </div>
                               <RadioGroup name={'attending' + i} selectedValue={guest.attending} onChange={(e) => this.handleAttendingRadio(e, i)} className="radioGroup">
-                              <Radio id={'attending' + guest.firstName} value="true"/><label className="leftAttendingLabel" for={'attending' + guest.firstName}>Accept</label>
-                              <Radio id={'attending' + guest.lastName} value="false"/><label className="rightAttendingLabel" for={'attending' + guest.lastName}>Regret</label>
+                              <Radio id={'attending' + guest.firstName} value="true"/><label className="leftAttendingLabel" htmlFor={'attending' + guest.firstName}>Accept</label>
+                              <Radio id={'attending' + guest.lastName} value="false"/><label className="rightAttendingLabel" htmlFor={'attending' + guest.lastName}>Regret</label>
                               </RadioGroup>
                               <div className="foodChoice">
-                              <span class="foodChoice">Please indicate food preference:</span>
+                              <span className="foodChoice">Please indicate food preference:</span>
                               <RadioGroup name={'attending' + i+1} selectedValue={guest.foodChoice} onChange={(e) => this.handleFoodRadio(e, i)} className="radioGroup">
-                              <Radio id={'attending' + guest.firstName + 1} value="fish"/><label className="leftAttendingLabel" for={'attending' + guest.firstName + 1}><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
-                              <Radio id={'attending' + guest.lastName + 1} value="meat"/><label className="rightAttendingLabel" for={'attending' + guest.lastName + 1}><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
+                              <Radio id={'attending' + guest.firstName + 1} value="fish"/><label className="leftAttendingLabel" htmlFor={'attending' + guest.firstName + 1}><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
+                              <Radio id={'attending' + guest.lastName + 1} value="meat"/><label className="rightAttendingLabel" htmlFor={'attending' + guest.lastName + 1}><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
                               </RadioGroup>
                               </div>
+                        </div>
+                        <div className="mt-20">
+                        <Button className="btn rsvp-modal-button" onClick={this.next}>Next</Button>
                         </div>
                      </div>
                </Carousel.Item>)
@@ -218,10 +235,7 @@ export class RSVP extends React.Component {
                   {CarouselConfirmationPage}
             </Carousel>
           </Modal.Body>
-          <Modal.Footer>
-            <Button className="rsvp-modal-button" onClick={this.next}>Next</Button>
-            <Button onClick={this.handleClose}>Close</Button>
-          </Modal.Footer>
+
         </Modal>
      </section>)
 
