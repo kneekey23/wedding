@@ -4,6 +4,7 @@ import {API_ROOT} from '../constants';
 import {RadioGroup, Radio} from 'react-radio-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ToastContainer, toast } from 'react-toastify';
+import {FormErrors} from '../components/FormErrors';
 import 'react-toastify/dist/ReactToastify.css';
 //import { RouteComponentProps } from 'react-router';
 
@@ -17,7 +18,11 @@ export class RSVP extends React.Component {
          index: 0,
          direction: null,
          show: false,
-         selectedAttendingRadio: 'Accept'
+         selectedAttendingRadio: 'Accept',
+         formErrors: {firstName: '', lastName: ''},
+         firstNameValid: false,
+         lastNameValid: false,
+         formValid: false
       }
       this.findInvite = this.findInvite.bind(this);
       this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -32,11 +37,13 @@ export class RSVP extends React.Component {
    }
 
    handleFirstNameChange(e){
-      this.setState({firstName: e.target.value});
+      let value = e.target.value;
+      this.setState({firstName: value}, () => { this.validateField("firstName", value) });
    }
 
    handleLastNameChange(e) {
-      this.setState({lastName: e.target.value});
+      let value = e.target.value;
+      this.setState({lastName: value}, () => { this.validateField("lastName", value) });
    }
 
    handleAttendingRadio(e, i) {
@@ -50,6 +57,34 @@ export class RSVP extends React.Component {
       guests[i].foodChoice = e;
       this.setState({guests: guests});
    }
+
+   validateField(name, value) {
+      let fieldValidationErrors = this.state.formErrors;
+      let firstNameValid = this.state.firstNameValid;
+      let lastNameValid = this.state.lastNameValid;
+    
+      switch(name) {
+        case 'firstName':
+          firstNameValid = value.length >= 2;
+          fieldValidationErrors.firstName = firstNameValid ? '' : 'Please fill in a first name.';
+          break;
+        case 'lastName':
+          lastNameValid = value.length >= 2;
+          fieldValidationErrors.lastName = lastNameValid ? '': 'Please fill in a last name.';
+          break;
+        default:
+          break;
+      }
+      this.setState({formErrors: fieldValidationErrors,
+                      firstNameValid: firstNameValid,
+                      lastNameValid: lastNameValid
+                    }, this.validateForm);
+   }
+
+   validateForm() {
+      this.setState({formValid: this.state.firstNameValid && this.state.lastNameValid});
+    }
+    
 
    next() {
       const prevIndex = this.state.index;
@@ -83,6 +118,9 @@ export class RSVP extends React.Component {
   
 
    findInvite() {
+      if(!this.state.formValid){
+         return;
+      }
       let url = `${API_ROOT}guest?firstName=${this.state.firstName}&lastName=${this.state.lastName}`;
       fetch(url, {
          method: 'GET',
@@ -93,16 +131,31 @@ export class RSVP extends React.Component {
          })
          .then(response => response.json())
          .then((result) => {
+            if(result.length > 0){
             this.setState({guests: result}, () => {
                this.handleShow();
             });
-            
-            console.log(this.state.guests);
+         }
+         else{
+            toast.error('No guests were found with that first name and last name. Please try your search again.', {
+               position: "top-right",
+               autoClose: 5000,
+               hideProgressBar: true,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true,
+               className: "toastError",
+               });
+         }
          },
          (error) => {
             console.log(error);
          
          })
+   }
+
+   errorClass(error) { 
+      return(error.length === 0 ? '' : 'has-error'); 
    }
 
    sendRsvp() {
@@ -135,6 +188,7 @@ export class RSVP extends React.Component {
          closeOnClick: true,
          pauseOnHover: true,
          draggable: true,
+         className: "toastSuccess"
          });
       
 
@@ -172,20 +226,23 @@ export class RSVP extends React.Component {
                  <div className="block-registry">
                   <h2 className="heavy normal mb-30">RSVP to our wedding here</h2>
                   <ToastContainer position="top-right" autoClose={5000} closeOnClick rtl={false} pauseOnVisibilityChange draggable pauseOnHover/>
+                  <div className="panel">
+                     <FormErrors formErrors={this.state.formErrors} />
+                  </div>
                     <form className="registry-form">
                        <div className="input-columns clearfix">
                           <div className="column-1">
-                             <div className="column-inner">
-                                <input placeholder="Enter your First Name" value={this.state.firstName} onChange={this.handleFirstNameChange} type="text"/>
+                             <div className={`column-inner form-group ${this.errorClass(this.state.formErrors.firstName)}`}>
+                                <input name="FirstName" placeholder="Enter your First Name" value={this.state.firstName} onChange={this.handleFirstNameChange} type="text"/>
                              </div>
                           </div>
                           <div className="column-2">
-                             <div className="column-inner">
-                             <input placeholder="Enter your Last Name" value={this.state.lastName} onChange={this.handleLastNameChange} type="text"/>
+                             <div className={`column-inner form-group ${this.errorClass(this.state.formErrors.lastName)}`}>
+                             <input name="LastName" placeholder="Enter your Last Name" value={this.state.lastName} onChange={this.handleLastNameChange} type="text"/>
                              </div>
                           </div>
                        </div>
-                       <button className="btn but submit" type="button" onClick={this.findInvite}>Find my invite</button>
+                       <button className="btn but submit" type="button" disabled={!this.state.formValid} onClick={this.findInvite}>Find my invite</button>
                     </form>
                  </div>
               </div>

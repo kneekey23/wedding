@@ -972,6 +972,23 @@ input[type="radio"] {
 .rsvpGuestName {
     padding: 5px;
 }
+
+.formErrors {
+    margin-left: 5px;
+    color: 	#da635d;
+    font-weight: bold;
+}
+
+.toastSuccess {
+    background: #a0d6b4 !important;
+    color: #757575;
+    font-weight: bold;
+}
+
+.toastError {
+    background: #da635d !important;
+    font-weight: bold; 
+}
 /*Media queries*/
 
 @media only screen and (min-device-width: 720px) and (max-device-width: 1280px) and (orientation: portrait) {

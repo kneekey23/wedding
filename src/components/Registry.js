@@ -13,7 +13,7 @@ export class Registry extends React.Component {
            </div>
            <div className="row relative">
                 <div className="col-sm-4">
-                    <p className="lead size-m mt-20">The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us we’ve picked out a few items, activities, and charities that pique our interests.</p>
+                    <p className="lead size-m mt-20">The best present you could possibly give us is the celebration of our marriage. However, if you’d like to spoil us we’ve picked out a few items and activities that pique our interests.</p>
                 </div>
               <div className="col-sm-4 registryBlock">
                  <div className="block-content">
