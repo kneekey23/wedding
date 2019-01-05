@@ -48,7 +48,7 @@ export class RSVP extends React.Component {
 
    handleAttendingRadio(e, i) {
       let guests = this.state.guests;
-      guests[i].attending = e;
+      guests[i].attending = this.stringToBool(e);
       this.setState({guests: guests});
    }
 
@@ -109,11 +109,21 @@ export class RSVP extends React.Component {
     }
 
     handleClose() {
-      this.setState({ show: false });
+      this.setState({ show: false, index: 0 });
     }
   
     handleShow() {
       this.setState({ show: true });
+    }
+
+   capitalizeFirst(string) 
+   {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+   }  
+
+    stringToBool(value) {
+
+      return (value == 'true');
     }
   
 
@@ -121,7 +131,9 @@ export class RSVP extends React.Component {
       if(!this.state.formValid){
          return;
       }
-      let url = `${API_ROOT}guest?firstName=${this.state.firstName}&lastName=${this.state.lastName}`;
+      let firstName = this.state.firstName.toLowerCase().replace(/ /g, '');
+      let lastName = this.state.lastName.toLowerCase().replace(/ /g, '');
+      let url = `${API_ROOT}guest?firstName=${firstName}&lastName=${lastName}`;
       fetch(url, {
          method: 'GET',
          headers: {
@@ -132,7 +144,14 @@ export class RSVP extends React.Component {
          .then(response => response.json())
          .then((result) => {
             if(result.length > 0){
-            this.setState({guests: result}, () => {
+             
+            let guests = result.map((guest) => {
+               guest.firstName = this.capitalizeFirst(guest.firstName);
+               guest.lastName = this.capitalizeFirst(guest.lastName);
+               return guest;
+            })
+            console.log(guests);
+            this.setState({guests: guests}, () => {
                this.handleShow();
             });
          }
@@ -169,7 +188,17 @@ export class RSVP extends React.Component {
    sendRsvp() {
       let url = `${API_ROOT}guest`;
       this.state.guests.forEach((val, i) => {
-         console.log(val);
+         //lowercase the names again before submitting
+       val.firstName = val.firstName.toLowerCase();
+       val.lastName = val.lastName.toLowerCase();
+
+       if(!val.attending){
+          val.foodChoice = "none";
+       }
+       if(val.attending && (val.foodChoice == "none" || val.foodChoice == undefined)){
+          //default food choice
+          val.foodChoice = "fish";
+       }
          fetch(url, {
             method: 'POST',
             headers: {
@@ -217,15 +246,17 @@ export class RSVP extends React.Component {
       let CarouselConfirmationPage;
       if(this.state.guests.length > 0){
          CarouselConfirmationPage = <Carousel.Item key={this.state.guests.length}>
+                                       <p className="mb-10">Are your details correct? Please confirm before submitting.</p>
                                        {this.state.guests.map((guest) => {
                                           let icon;
-                                          if(guest.attending === 'true'){
+                                          console.log(guest.attending);
+                                          if(guest.attending){
                                              icon = <FontAwesomeIcon className="mr-5 attendingCheck" icon="check" />
                                           }
                                           else{
                                              icon = <FontAwesomeIcon className="mr-5 attendingX" icon="times" />
                                           }
-                                          return (<div key={guest.firstName + 1} className="rsvpGuestName">
+                                          return (<div key={guest.firstName + 1} className="rsvpGuestName mb-10">
                                                    {icon}
                                                    {guest.firstName + ' ' + guest.lastName}
                                                    </div>)
@@ -290,16 +321,16 @@ export class RSVP extends React.Component {
                                     <span className="datetime-divider"> | </span> 
                                     <span>6:00 PM</span>
                               </div>
-                              <RadioGroup name={'attending' + i} selectedValue={guest.attending} onChange={(e) => this.handleAttendingRadio(e, i)} className="radioGroup">
-                              <Radio id={'attending' + guest.firstName} value="true"/><label className="leftAttendingLabel" htmlFor={'attending' + guest.firstName}>Accept</label>
-                              <Radio id={'attending' + guest.lastName} value="false"/><label className="rightAttendingLabel" htmlFor={'attending' + guest.lastName}>Regret</label>
+                              <RadioGroup name={'attending' + i} selectedValue={guest.attending == undefined ? true : guest.attending.toString()} onChange={(e) => this.handleAttendingRadio(e, i)} className="radioGroup">
+                              <Radio id={'attending' + guest.firstName + i} value="true"/><label className="leftAttendingLabel" htmlFor={'attending' + guest.firstName + i}>Accept</label>
+                              <Radio id={'regret' + guest.lastName + i} value="false"/><label className="rightAttendingLabel" htmlFor={'regret' + guest.lastName + i}>Regret</label>
                               </RadioGroup>
                               <div className="foodChoice">
-                              <span className="foodChoice">Please indicate food preference:</span>
-                              <RadioGroup name={'attending' + i+1} selectedValue={guest.foodChoice} onChange={(e) => this.handleFoodRadio(e, i)} className="radioGroup">
-                              <Radio id={'attending' + guest.firstName + 1} value="fish"/><label className="leftAttendingLabel" htmlFor={'attending' + guest.firstName + 1}><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
-                              <Radio id={'attending' + guest.lastName + 1} value="meat"/><label className="rightAttendingLabel" htmlFor={'attending' + guest.lastName + 1}><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
-                              </RadioGroup>
+                                 <span className="foodChoice">Please indicate food preference:</span>
+                                 <RadioGroup name={'food' + i } selectedValue={guest.foodChoice == undefined || guest.foodChoice == 'none' ? 'fish' : guest.foodChoice.toString()} onChange={(e) => this.handleFoodRadio(e, i)} className="radioGroup">
+                                    <Radio id={'fish' + guest.firstName + 1} value="fish"/><label className="leftAttendingLabel" htmlFor={'fish' + guest.firstName + 1}><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
+                                    <Radio id={'meat' + guest.firstName + 2} value="meat"/><label className="rightAttendingLabel" htmlFor={'meat' + guest.firstName + 2}><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
+                                 </RadioGroup>
                               </div>
                         </div>
                         <div className="mt-20">

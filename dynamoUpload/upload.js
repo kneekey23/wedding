@@ -31,10 +31,10 @@ parser = parse({
                     "S": uuidv4()
                 },
                 "firstName": {
-                  "S": cur25[i].firstName
+                  "S": cur25[i].firstName.toLowerCase()
                 },
                 "lastName": {
-                  "S": cur25[i].lastName
+                  "S": cur25[i].lastName.toLowerCase()
                 },
                 "email": {
                     "S": cur25[i].email
@@ -45,9 +45,9 @@ parser = parse({
                 "plusOne": {
                     "BOOL": isTrue(cur25[i].plusOne)
                 },
-                "attending": {
-                    "BOOL": isTrue(cur25[i].attending)
-                },
+                // "attending": {
+                //     "BOOL": isTrue(cur25[i].attending)
+                // },
                 "groupId": {
                     "S": cur25[i].groupId
                 }
