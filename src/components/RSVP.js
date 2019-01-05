@@ -149,7 +149,15 @@ export class RSVP extends React.Component {
          }
          },
          (error) => {
-            console.log(error);
+            toast.error('There was an error with your request. Please try your search again.', {
+               position: "top-right",
+               autoClose: 5000,
+               hideProgressBar: true,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true,
+               className: "toastError",
+               });
          
          })
    }
@@ -173,23 +181,34 @@ export class RSVP extends React.Component {
             .then(response => response.json())
             .then((result) => {
                   this.handleClose();
+                  if(this.state.guests.length -1 == i){
+                  toast.success('Your RSVP has been saved! Thanks!', {
+                     position: "top-right",
+                     autoClose: 5000,
+                     hideProgressBar: true,
+                     closeOnClick: true,
+                     pauseOnHover: true,
+                     draggable: true,
+                     className: "toastSuccess"
+                     });
+                  }
                   
             },
             (error) => {
-               console.log(error);
+               toast.error('There was an error with your submission. Please try submitting your rsvp again.', {
+                  position: "top-right",
+                  autoClose: 5000,
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  className: "toastError",
+                  });
             
             })
       })
 
-      toast.success('Your RSVP has been saved! Thanks!', {
-         position: "top-right",
-         autoClose: 5000,
-         hideProgressBar: true,
-         closeOnClick: true,
-         pauseOnHover: true,
-         draggable: true,
-         className: "toastSuccess"
-         });
+     
       
 
    }
