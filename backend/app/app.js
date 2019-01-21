@@ -30,8 +30,8 @@ router.get('/guest', async (req, res) => {
 
   let response = await find(req.query);
 
-  if(response) {
-    let completeGroup = await findByGroup(response.groupId);
+  if(response.Item) {
+    let completeGroup = await findByGroup(response.Item.groupId);
     console.log("this should be an array:" + completeGroup);
     res.json(completeGroup.Items);
   }
@@ -72,22 +72,13 @@ const insertPlusOne = async(body) => {
     }
   }
 
-  return await new Promise((resolve, reject) => {
-    dynamodbClient.put(params, (error, data) => {
-      if (error) {
-        console.log(`ERROR=${error.stack}`);
-          resolve({
-            statusCode: 400,
-            error: `Could not create insert guest: ${error.stack}`
-          });
-  
-      } else {
-        console.log(`data=${JSON.stringify(data)}`);
-        
-        resolve({ statusCode: 200, body: JSON.stringify(params.Item) });
-      }
-    });
-  });
+  try{
+    let data = await dynamodbClient.put(params).promise();
+    console.log(data);
+    return data;
+  } catch(error) {
+      return error;
+  }
 
 }
 
@@ -101,26 +92,13 @@ const find = async(query) => {
     }
   };
 
-  return await new Promise((resolve, reject) => {
-    dynamodbClient.get(params, function(err, data) {
-      if (err) {
-        console.log(`getMessage ERROR=${err.stack}`);
-        resolve({
-          statusCode: 400,
-          error: `Could not retrieve guest: ${err.stack}`
-        });
-      } else if (!data || typeof data === 'undefined' || !data.Item) {
-        console.log(`getGuest did not find guest=${query.firstName + query.lastName}`);
-        resolve({
-          statusCode: 404,
-          error: `Could not find guest for guest: ${query.firstName + query.lastName}`
-        });
-      } else {
-        console.log(`getGuest data=${JSON.stringify(data.Item)}`);
-        resolve(data.Item);
-      }
-    });
-  });
+  try{
+    let data = await dynamodbClient.get(params).promise();
+    console.log(data);
+    return data;
+  } catch(error) {
+      return error;
+  }
 }
 
 const findByGroup = async(groupId) => {
