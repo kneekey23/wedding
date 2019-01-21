@@ -32,14 +32,22 @@ export class Registry extends React.Component {
                  </div>
               </div>
            </div>
-           <div>
+           <div className="row">
                <div className="col-sm-offset-4 col-sm-4 registryBlock">
-               <div className="block-content">
-                 <a className="btn" href="https://www.potterybarn.com/registry/qfrh7prlxk/registry-list.html">
-                    <img className="gift-reg" src="img/pb.png" alt="pottery barn registry" />
-                    <span className="registryText">Pottery Barn</span>
-                    </a>
-                 </div>
+                  <div className="block-content">
+                  <a className="btn" href="https://www.potterybarn.com/registry/qfrh7prlxk/registry-list.html">
+                     <img className="gift-reg" src="img/pb.png" alt="pottery barn registry" />
+                     <span className="registryText">Pottery Barn</span>
+                     </a>
+                  </div>
+               </div>
+               <div className="col-sm-4 registryBlock">
+                  <div className="block-content">
+                  <a className="btn" href="https://www.williams-sonoma.com/registry/f2qn8dg2tb/registry-list.html">
+                     <img className="gift-reg" src="img/ws.png" alt="williams sonoma registry" />
+                     <span className="registryText">Williams Sonoma</span>
+                     </a>
+                  </div>
                </div>
            </div>
         </div>

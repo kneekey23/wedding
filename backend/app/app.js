@@ -51,6 +51,11 @@ router.post('/guest', async(req, res) => {
   res.json(updateResponse);
 })
 
+router.post('/status', async(req, res) => {
+let updateStatus = await updatePlusOneStatus(req.body);
+res.json(updateStatus);
+})
+
 const insertPlusOne = async(body) => {
   //to lower
   body.firstName = body.firstName.toLowerCase();
@@ -78,6 +83,7 @@ const insertPlusOne = async(body) => {
   
       } else {
         console.log(`data=${JSON.stringify(data)}`);
+        
         resolve({ statusCode: 200, body: JSON.stringify(params.Item) });
       }
     });
@@ -147,6 +153,30 @@ const updateGuestAttending = async(guest) => {
     ExpressionAttributeValues:{
         ":attend": guest.attending,
         ":food": guest.foodChoice
+    },
+    ReturnValues:"UPDATED_NEW"
+  };
+  console.log(params);
+  try{
+    let data = await dynamodbClient.update(params).promise();
+    console.log(data);
+    return data;
+  } catch(error) {
+      return error;
+  }
+}
+
+const updatePlusOneStatus = async(guest) => {
+
+  var params = {
+    TableName:tableName,
+    Key:{
+        "firstName": guest.firstName,
+        "lastName": guest.lastName
+    },
+    UpdateExpression: "set plusOne=:plusOne",
+    ExpressionAttributeValues:{
+        ":plusOne": false
     },
     ReturnValues:"UPDATED_NEW"
   };

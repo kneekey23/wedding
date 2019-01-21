@@ -1010,6 +1010,10 @@ input[type="radio"] {
     img.gift-reg {
         max-width: 40%;
     }
+
+   .pb {
+        max-width: 23%;
+    }
     .circle-dashed.timeline {
         top: 35%;
     }

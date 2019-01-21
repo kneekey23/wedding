@@ -42,6 +42,7 @@ export class RSVP extends React.Component {
       this.sendGuest = this.sendGuest.bind(this);
       this.handleGuestFirstNameChange = this.handleGuestFirstNameChange.bind(this);
       this.handleGuestLastNameChange = this.handleGuestLastNameChange.bind(this);
+      this.updatePlusOneStatus = this.updatePlusOneStatus.bind(this);
    }
 
    handleFirstNameChange(e){
@@ -114,6 +115,7 @@ export class RSVP extends React.Component {
     }
 
    next() {
+
       const prevIndex = this.state.index;
       this.setState({
          direction: 'next',
@@ -123,7 +125,6 @@ export class RSVP extends React.Component {
             this.forceUpdate();
          }
       })
-      
       
     }
 
@@ -280,7 +281,8 @@ export class RSVP extends React.Component {
          address: mainGuest.address,
          foodChoice: this.state.guestFoodChoice,
          email: mainGuest.email,
-         groupId: mainGuest.groupId
+         groupId: mainGuest.groupId,
+         attending: true
       }
 
       fetch(url, {
@@ -295,9 +297,15 @@ export class RSVP extends React.Component {
          .then((result) => {
                let guests = this.state.guests
                guests.push(newGuest);
-               this.setState({guests: guests}, () => {
-                  this.next();
+               const prevIndex = this.state.index;
+               this.setState({guests: guests, showPlusOneForm: false}, () => {
+                 
+                 this.next();
+
                });
+
+               //update main guest status of plus one to false
+               this.updatePlusOneStatus(mainGuest);
 
          },
          (error) => {
@@ -314,11 +322,43 @@ export class RSVP extends React.Component {
          })
    }
 
+   updatePlusOneStatus(mainGuest) {
+      let url = `${API_ROOT}status`;
+      //lowercase first and last name for query
+      mainGuest.firstName = mainGuest.firstName.toLowerCase();
+      mainGuest.lastName = mainGuest.lastName.toLowerCase();
+      fetch(url, {
+         method: 'POST',
+         headers: {
+             'Accept': 'application/json',
+             'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(mainGuest)
+         })
+         .then(response => response.json())
+         .then((result) => {},
+         (error) => {
+            toast.error('There was an error with your guest submission. Please try submitting your guest again.', {
+               position: "top-right",
+               autoClose: 5000,
+               hideProgressBar: true,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true,
+               className: "toastError",
+               });
+         
+         })
+
+   }
+
     render() {
       let CarouselConfirmationPage;
       let CarouselPlusOnePage;
+      let confirmIndex = this.state.showPlusOneForm ? this.state.guests.length + 1 : this.state.guests.length;
+      
       if(this.state.guests.length > 0){
-         CarouselConfirmationPage = <Carousel.Item key={this.state.guests.length}>
+         CarouselConfirmationPage = <Carousel.Item key={confirmIndex}>
                                        <p className="mb-10">Are your details correct? Please confirm before submitting.</p>
                                        {this.state.guests.map((guest) => {
                                           let icon;
@@ -338,7 +378,7 @@ export class RSVP extends React.Component {
                                     </Carousel.Item>
       }
       if(this.state.guests.length > 0 && this.state.guests.filter(guest => guest.plusOne == true).length > 0 && this.state.showPlusOneForm){
-         CarouselPlusOnePage = <Carousel.Item key={this.state.guests.length -1}>
+         CarouselPlusOnePage = <Carousel.Item key={this.state.guests.length}>
                                  <p className="mb-10">Please enter your guest's name</p>
                                  <form className="registry-form">
                                  <div className="panel">
