@@ -22,7 +22,11 @@ export class RSVP extends React.Component {
          formErrors: {firstName: '', lastName: ''},
          firstNameValid: false,
          lastNameValid: false,
-         formValid: false
+         formValid: false,
+         showPlusOneForm: true,
+         guestFirstName: '',
+         guestLastName: '',
+         guestFoodChoice: 'fish'
       }
       this.findInvite = this.findInvite.bind(this);
       this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -34,6 +38,10 @@ export class RSVP extends React.Component {
       this.handleAttendingRadio = this.handleAttendingRadio.bind(this);
       this.handleFoodRadio = this.handleFoodRadio.bind(this);
       this.sendRsvp = this.sendRsvp.bind(this);
+      this.handlePlusOneRadio = this.handlePlusOneRadio.bind(this);
+      this.sendGuest = this.sendGuest.bind(this);
+      this.handleGuestFirstNameChange = this.handleGuestFirstNameChange.bind(this);
+      this.handleGuestLastNameChange = this.handleGuestLastNameChange.bind(this);
    }
 
    handleFirstNameChange(e){
@@ -44,6 +52,16 @@ export class RSVP extends React.Component {
    handleLastNameChange(e) {
       let value = e.target.value;
       this.setState({lastName: value}, () => { this.validateField("lastName", value) });
+   }
+
+   handleGuestFirstNameChange(e) {
+      let value = e.target.value;
+      this.setState({guestFirstName: value}, () => {this.validateField("firstName", value)});
+   }
+
+   handleGuestLastNameChange(e) {
+      let value = e.target.value;
+      this.setState({guestLastName: value}, () => {this.validateField("lastName", value)});
    }
 
    handleAttendingRadio(e, i) {
@@ -57,6 +75,16 @@ export class RSVP extends React.Component {
       guests[i].foodChoice = e;
       this.setState({guests: guests});
    }
+
+   handlePlusOneRadio(e) {
+      let answer = this.stringToBool(e);
+      this.setState({showPlusOneForm: answer});
+   }
+
+   handlePlusOneFoodChoice(e) {
+      this.setState({guestFoodChoice: e});
+   }
+   
 
    validateField(name, value) {
       let fieldValidationErrors = this.state.formErrors;
@@ -84,7 +112,6 @@ export class RSVP extends React.Component {
    validateForm() {
       this.setState({formValid: this.state.firstNameValid && this.state.lastNameValid});
     }
-    
 
    next() {
       const prevIndex = this.state.index;
@@ -242,8 +269,54 @@ export class RSVP extends React.Component {
 
    }
 
+   sendGuest() {
+      let url = `${API_ROOT}guest`;
+
+      let mainGuest = this.state.guests.filter(guest => guest.plusOne == true)[0];
+
+      let newGuest = {
+         firstName: this.state.guestFirstName,
+         lastName: this.state.guestLastName,
+         address: mainGuest.address,
+         foodChoice: this.state.guestFoodChoice,
+         email: mainGuest.email,
+         groupId: mainGuest.groupId
+      }
+
+      fetch(url, {
+         method: 'PUT',
+         headers: {
+             'Accept': 'application/json',
+             'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(newGuest)
+         })
+         .then(response => response.json())
+         .then((result) => {
+               let guests = this.state.guests
+               guests.push(newGuest);
+               this.setState({guests: guests}, () => {
+                  this.next();
+               });
+
+         },
+         (error) => {
+            toast.error('There was an error with your guest submission. Please try submitting your guest again.', {
+               position: "top-right",
+               autoClose: 5000,
+               hideProgressBar: true,
+               closeOnClick: true,
+               pauseOnHover: true,
+               draggable: true,
+               className: "toastError",
+               });
+         
+         })
+   }
+
     render() {
       let CarouselConfirmationPage;
+      let CarouselPlusOnePage;
       if(this.state.guests.length > 0){
          CarouselConfirmationPage = <Carousel.Item key={this.state.guests.length}>
                                        <p className="mb-10">Are your details correct? Please confirm before submitting.</p>
@@ -264,6 +337,30 @@ export class RSVP extends React.Component {
                                        <Button onClick={this.sendRsvp} className="rsvp-modal-button">Send Rsvp</Button>
                                     </Carousel.Item>
       }
+      if(this.state.guests.length > 0 && this.state.guests.filter(guest => guest.plusOne == true).length > 0 && this.state.showPlusOneForm){
+         CarouselPlusOnePage = <Carousel.Item key={this.state.guests.length -1}>
+                                 <p className="mb-10">Please enter your guest's name</p>
+                                 <form className="registry-form">
+                                 <div className="panel">
+                                    <FormErrors formErrors={this.state.formErrors} />
+                                 </div>
+                                 <div className="form-group">
+                                    <input type="text" name="GuestFirstName" className="form-control" value={this.state.guestFirstName} onChange={this.handleGuestFirstNameChange} placeholder="First Name" />
+                                 </div>
+                                 <div className="form-group">
+                                    <input type="text" name="GuestLastName" className="form-control" value={this.state.guestLastName} onChange={this.handleGuestLastNameChange} placeholder="Last Name" />
+                                 </div>
+                                 <div className="radioGroupExtra mb-10">
+                                    <span className="radioGroupExtra">Please indicate food preference:</span>
+                                    <RadioGroup name="guestfoodchoice" selectedValue={this.state.guestFoodChoice} onChange={(e) => this.handlePlusOneFoodChoice(e)} className="radioGroup">
+                                       <Radio id="fish1" value="fish"/><label className="leftAttendingLabel" htmlFor="fish1"><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
+                                       <Radio id="meat1" value="meat"/><label className="rightAttendingLabel" htmlFor="meat1"><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
+                                    </RadioGroup>
+                                 </div>
+                                 <Button onClick={this.sendGuest} className="rsvp-modal-button">Submit Guest</Button>
+                                 </form>
+                              </Carousel.Item>
+      }
       const { index, direction } = this.state;
         return ( <section id="rsvp" className="rsvp bg-grey pt-120 pb-120 ">
         <div className="container">
@@ -280,7 +377,7 @@ export class RSVP extends React.Component {
                      <FormErrors formErrors={this.state.formErrors} />
                   </div>
                     <form className="registry-form">
-                       <div className="input-columns clearfix">
+                       <div className="input-columns clearfix mb-10">
                           <div className="column-1">
                              <div className={`column-inner form-group ${this.errorClass(this.state.formErrors.firstName)}`}>
                                 <input name="FirstName" placeholder="Enter your First Name" value={this.state.firstName} onChange={this.handleFirstNameChange} type="text"/>
@@ -309,7 +406,16 @@ export class RSVP extends React.Component {
           <hr className="rsvp-hr"></hr>
           <Carousel indicators={false} controls={false} activeIndex={index} direction={direction} onSelect={this.handleSelect}>
             {this.state.guests.map((guest, i) => {
-
+               let plusOneAsk;
+               if(guest.plusOne){
+                  plusOneAsk = <div className="radioGroupExtra">
+                                 <span className="radioGroupExtra">RSVP for your plus one?</span>
+                                 <RadioGroup name={'plusone' + i } selectedValue={this.state.showPlusOneForm.toString()} onChange={(e) => this.handlePlusOneRadio(e)} className="radioGroup">
+                                    <Radio id={'yes' + guest.firstName + 1} value="true"/><label className="leftAttendingLabel" htmlFor={'yes' + guest.firstName + 1}>Yes</label>
+                                    <Radio id={'no' + guest.firstName + 2} value="false"/><label className="rightAttendingLabel" htmlFor={'no' + guest.firstName + 2}>No</label>
+                                 </RadioGroup>
+                              </div>
+               }
                 return (<Carousel.Item key={i}>
                      <div id="view10" className="rsvp-view">
                         <p className="rsvp-guest-counter pb">Guest {i + 1} of {this.state.guests.length}:</p>
@@ -325,13 +431,14 @@ export class RSVP extends React.Component {
                               <Radio id={'attending' + guest.firstName + i} value="true"/><label className="leftAttendingLabel" htmlFor={'attending' + guest.firstName + i}>Accept</label>
                               <Radio id={'regret' + guest.lastName + i} value="false"/><label className="rightAttendingLabel" htmlFor={'regret' + guest.lastName + i}>Regret</label>
                               </RadioGroup>
-                              <div className="foodChoice">
-                                 <span className="foodChoice">Please indicate food preference:</span>
+                              <div className="radioGroupExtra">
+                                 <span className="radioGroupExtra">Please indicate food preference:</span>
                                  <RadioGroup name={'food' + i } selectedValue={guest.foodChoice == undefined || guest.foodChoice == 'none' ? 'fish' : guest.foodChoice.toString()} onChange={(e) => this.handleFoodRadio(e, i)} className="radioGroup">
                                     <Radio id={'fish' + guest.firstName + 1} value="fish"/><label className="leftAttendingLabel" htmlFor={'fish' + guest.firstName + 1}><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
                                     <Radio id={'meat' + guest.firstName + 2} value="meat"/><label className="rightAttendingLabel" htmlFor={'meat' + guest.firstName + 2}><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
                                  </RadioGroup>
                               </div>
+                              {plusOneAsk}
                         </div>
                         <div className="mt-20">
                         <Button className="btn rsvp-modal-button" onClick={this.next}>Next</Button>
@@ -339,6 +446,7 @@ export class RSVP extends React.Component {
                      </div>
                </Carousel.Item>)
                   })}
+                  {CarouselPlusOnePage}
                   {CarouselConfirmationPage}
             </Carousel>
           </Modal.Body>

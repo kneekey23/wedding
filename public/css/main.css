@@ -955,7 +955,7 @@ input[type="radio"] {
     margin-right: 5px;
 }
 
-.foodChoice {
+.radioGroupExtra {
     margin-top:10px;
     font-size: 13.5px;
     line-height: 17px;
