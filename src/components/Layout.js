@@ -16,16 +16,10 @@ class Layout extends React.Component{
                         <div className='background-img'>
                             {/* <img src='img/NJ.jpg' alt='' /> */}
                         </div>
-                        <header className='header default'>
-                            <div className='left-part'>
-                                <a className='logo scroll' href='#hero'>
-                                <h2>N &amp; J</h2>
-                                </a>
-                            </div>
-                            <div className='right-part'>
-                                <NavMenu />
-                            </div>
-                        </header>
+                        
+                        <NavMenu />
+                      
+                        
                         <div className='inner-hero'>
                             <div className='container hero-content'>
                                 <div className='row'>

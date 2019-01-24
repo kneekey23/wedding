@@ -1614,7 +1614,7 @@
 .icon-airfield:before { content: '\ee06'; } /* 'î¸†' */
 .icon-airport:before { content: '\ee07'; } /* 'î¸‡' */
 .icon-art-gallery:before { content: '\ee08'; } /* 'î¸ˆ' */
-.icon-bar:before { content: '\ee09'; } /* 'î¸‰' */
+/* .icon-bar:before { content: '\ee09'; } 'î¸‰' */
 .icon-baseball:before { content: '\ee0a'; } /* 'î¸Š' */
 .icon-basketball:before { content: '\ee0b'; } /* 'î¸‹' */
 .icon-beer-2:before { content: '\ee0c'; } /* 'î¸Œ' */
