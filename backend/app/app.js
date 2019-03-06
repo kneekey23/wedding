@@ -64,11 +64,11 @@ const insertPlusOne = async(body) => {
 
   let attending = true;
   let plusOne = false;
-  const { firstName, lastName, email, address, foodChoice, groupId } = body;
+  const { firstName, lastName, email, address, foodChoice, groupId, dietaryRestrictions } = body;
   var params = {
     TableName: tableName,
     Item: {
-        id, firstName, lastName, email, address, foodChoice, groupId, attending, plusOne
+        id, firstName, lastName, email, address, foodChoice, groupId, attending, plusOne, dietaryRestrictions
     }
   }
 
@@ -127,10 +127,11 @@ const updateGuestAttending = async(guest) => {
         "firstName": guest.firstName,
         "lastName": guest.lastName
     },
-    UpdateExpression: "set attending=:attend, foodChoice=:food",
+    UpdateExpression: "set attending=:attend, foodChoice=:food, dietaryRestrictions=:dietary",
     ExpressionAttributeValues:{
         ":attend": guest.attending,
-        ":food": guest.foodChoice
+        ":food": guest.foodChoice,
+        ":dietary": guest.dietaryRestrictions
     },
     ReturnValues:"UPDATED_NEW"
   };

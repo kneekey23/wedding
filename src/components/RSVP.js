@@ -26,11 +26,14 @@ export class RSVP extends React.Component {
          showPlusOneForm: true,
          guestFirstName: '',
          guestLastName: '',
-         guestFoodChoice: 'fish'
+         guestFoodChoice: 'fish',
+         guestDietaryRestrictions: ''
       }
       this.findInvite = this.findInvite.bind(this);
       this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
       this.handleLastNameChange = this.handleLastNameChange.bind(this);
+      this.handleDietaryRestrictionChange = this.handleDietaryRestrictionChange.bind(this);
+      this.handleGuestDietaryRestrictionChange = this.handleGuestDietaryRestrictionChange.bind(this);
       this.handleShow = this.handleShow.bind(this);
       this.handleClose = this.handleClose.bind(this);
       this.next = this.next.bind(this);
@@ -53,6 +56,17 @@ export class RSVP extends React.Component {
    handleLastNameChange(e) {
       let value = e.target.value;
       this.setState({lastName: value}, () => { this.validateField("lastName", value) });
+   }
+
+   handleDietaryRestrictionChange(e, i) {
+      let guests = this.state.guests;
+      guests[i].dietaryRestrictions = e.target.value;
+      this.setState({guests: guests});
+   }
+
+   handleGuestDietaryRestrictionChange(e) {
+      let value = e.target.value;
+      this.setState({guestDietaryRestrictions: value});
    }
 
    handleGuestFirstNameChange(e) {
@@ -227,6 +241,9 @@ export class RSVP extends React.Component {
           //default food choice
           val.foodChoice = "fish";
        }
+       if(val.dietaryRestrictions === undefined){
+          val.dietaryRestrictions = "none";
+       }
          fetch(url, {
             method: 'POST',
             headers: {
@@ -282,6 +299,7 @@ export class RSVP extends React.Component {
          foodChoice: this.state.guestFoodChoice,
          email: mainGuest.email,
          groupId: mainGuest.groupId,
+         dietaryRestrictions: this.state.guestDietaryRestrictions,
          attending: true
       }
 
@@ -397,6 +415,10 @@ export class RSVP extends React.Component {
                                        <Radio id="meat1" value="meat"/><label className="rightAttendingLabel" htmlFor="meat1"><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
                                     </RadioGroup>
                                  </div>
+                                 <div className="form-group mt-10">
+                                    <label className="mb-10" htmlFor="comment">Dietary Restrictions:</label>
+                                    <textarea className="form-control" rows="3" value={this.state.guestDietaryRestrictions} onChange={(e) => this.handleGuestDietaryRestrictionChange(e)}></textarea>
+                                 </div>
                                  <Button onClick={this.sendGuest} className="rsvp-modal-button">Submit Guest</Button>
                                  </form>
                               </Carousel.Item>
@@ -477,6 +499,10 @@ export class RSVP extends React.Component {
                                     <Radio id={'fish' + guest.firstName + 1} value="fish"/><label className="leftAttendingLabel" htmlFor={'fish' + guest.firstName + 1}><FontAwesomeIcon className="mr-5" icon="fish" />Fish</label>
                                     <Radio id={'meat' + guest.firstName + 2} value="meat"/><label className="rightAttendingLabel" htmlFor={'meat' + guest.firstName + 2}><FontAwesomeIcon className="mr-5" icon="drumstick-bite" />Meat</label>
                                  </RadioGroup>
+                              </div>
+                              <div className="form-group mt-10">
+                                 <label htmlFor="comment"className="pb-10">Dietary Restrictions:</label>
+                                 <textarea className="form-control" rows="3" value={guest.dietaryRestrictions === undefined ? '': guest.dietaryRestrictions.toString()} onChange={(e) => this.handleDietaryRestrictionChange(e, i)}></textarea>
                               </div>
                               {plusOneAsk}
                         </div>
